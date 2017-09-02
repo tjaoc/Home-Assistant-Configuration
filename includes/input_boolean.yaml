@@ -38,18 +38,11 @@ disable_media_player_light_control:
   name: Disable Media Player Light Control
   initial: off
   icon: mdi:play-pause
-disable_entryway_light_trent_home:
-  name: Disable Entryway Light When Trent Home
+disable_entry_light_trent_home:
+  name: Disable Entry Light When Trent Home
   initial: off
   icon: mdi:home
-  
-############################################################
-#
-# Home Assistant IFTTT Switch
-#
-############################################################
-
-ifttt_office_lamp:
-  name: Office Lamp
+disable_entryway_light_frontdoor:
+  name: Disable Entryway Light When Frontdoor Open
   initial: off
-  icon: mdi:flash
+  icon: mdi:home

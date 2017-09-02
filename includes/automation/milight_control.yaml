@@ -25,7 +25,7 @@
 
 ############################################################
 #
-# Turn on Entryway Light Trent Arrives Home / Turn off after 10 Minutes
+# Turn on Entry Light Trent Arrives Home / Turn off after 10 Minutes - Will be changed to Entry.
 #
 ############################################################
 
@@ -42,7 +42,35 @@
       after: sunset
       after_offset: -0:30:00
     - condition: state
-      entity_id: input_boolean.disable_entryway_light_trent_home
+      entity_id: input_boolean.disable_entry_light_trent_home
+      state: 'off'
+  action:
+  - service: light.turn_on
+    entity_id: light.entry
+  - delay: '00:10:00'
+  - service: light.turn_off
+    entity_id: light.entry
+    
+    
+############################################################
+#
+# Turn on Entryway Light when the front door is opened / Turn off after 10 Minutes
+#
+############################################################
+
+- alias: Entryway Light Front Door
+  trigger:
+  - platform: state 
+    entity_id: binary_sensor.door_window_sensor_158d00019f3211
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: sun
+      after: sunset
+      after_offset: -0:30:00
+    - condition: state
+      entity_id: input_boolean.disable_entryway_light_frontdoor
       state: 'off'
   action:
   - service: light.turn_on

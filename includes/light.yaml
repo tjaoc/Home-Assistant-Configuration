@@ -1,6 +1,6 @@
 ############################################################
 #
-# Home Assistant Group
+# Home Assistant Lights
 #
 ############################################################
 
@@ -14,14 +14,85 @@
   color_temp: true
   rgb: true
   brightness: true
-  #optimistic: false
+  effect: true
+  retain: true
 
-# Limitless LED UDP Platform
-#platform: limitlessled
-#bridges:
-#  - host: 192.168.1.39
-#    port: 11
-#    groups:
-#    - number: 1
-#      name: Entry
-#      type: rgbww
+- platform: mqtt_json
+  name: "Entry"
+  command_topic: milight/commands/0x11/rgb_cct/2
+  state_topic: milight/updates/0x11/rgb_cct/2
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Projector Room"
+  command_topic: milight/commands/0x11/rgb_cct/3
+  state_topic: milight/updates/0x11/rgb_cct/3
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Study"
+  command_topic: milight/commands/0x11/rgb_cct/4
+  state_topic: milight/updates/0x11/rgb_cct/4
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Living Room"
+  command_topic: milight/commands/0x12/rgb_cct/1
+  state_topic: milight/updates/0x12/rgb_cct/1
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Kitchen"
+  command_topic: milight/commands/0x12/rgb_cct/2
+  state_topic: milight/updates/0x12/rgb_cct/2
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Dining Room"
+  command_topic: milight/commands/0x12/rgb_cct/3
+  state_topic: milight/updates/0x12/rgb_cct/3
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+- platform: mqtt_json
+  name: "Bed Room"
+  command_topic: milight/commands/0x12/rgb_cct/4
+  state_topic: milight/updates/0x12/rgb_cct/4
+  color_temp: true
+  rgb: true
+  brightness: true
+  effect: true
+  retain: true
+
+
+############
+# Yeelight
+############
+- platform: yeelight
+  devices:
+    192.168.1.85:
+      name: Study Desk Lamp
+      transition: 1000

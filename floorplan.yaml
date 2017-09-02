@@ -3,9 +3,9 @@
       stylesheet: /local/custom_ui/floorplan/home.css
       
       # These options are optional
-      # warnings:            # enable warnings (to find out why things might ot be working correctly)
+      # warnings:            # enable warnings (to find out why things might not be working correctly)
       # pan_zoom:            # enable experimental panning / zooming
-      # hide_app_toolbar:    # hide the application toolbar (when used as a custom panel)
+      hide_app_toolbar:    # hide the application toolbar (when used as a custom panel)
 
       last_motion_entity: sensor.template_last_motion
       last_motion_class: last-motion
@@ -80,8 +80,15 @@
              - switch.bed_trent_lamp
              - switch.bed_rachel_lamp
              - switch.outside_heater
-             - input_boolean.ifttt_office_lamp
+             - light.study_desk_lamp
              - light.entryway
+             - light.entry
+             - light.living_room
+             - light.kitchen
+             - light.dining_room
+             - light.study
+             - light.projector_room
+             - light.bed_room
           states:
             - state: 'on'
               class: 'switch-on'

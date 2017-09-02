@@ -29,7 +29,9 @@ lights_view:
   view: yes
   icon: mdi:lightbulb
   entities:
-    - group.lamps
+    - group.lights
+    - group.templights
+    - group.switches
 info_view:
   view: yes
   icon: mdi:settings
@@ -110,20 +112,34 @@ cameras:
   entities:
     - camera.front_door
     - camera.back_deck
-lamps:
-  name: Lamps
+lights:
+  name: Lights
   entities:
+    - light.entry
     - light.entryway
+    - light.study_desk_lamp
+templights:
+  name: Temp Lights
+  entities:
+    - light.living_room
+    - light.kitchen
+    - light.dining_room
+    - light.study
+    - light.projector_room
+    - light.bed_room
+switches:
+  name: Switches
+  entities:
     - switch.living_room_lamp
     - switch.bed_rachel_lamp
     - switch.bed_trent_lamp
     - switch.outside_heater
-    - input_boolean.ifttt_office_lamp
 infolinks:
   name: Links
   entities:
     - weblink.router
     - weblink.synology
+    - weblink.HADashboard
     - weblink.surveillance_station
     - weblink.nzb_get
     - weblink.sonarr
@@ -164,9 +180,10 @@ automation_override:
     - input_boolean.disable_afternoon_notification
     - input_boolean.disable_unexpected_motion_notification
     - input_boolean.disable_device_tampering_notification
-    - input_boolean.disable_entryway_light_trent_home
+    - input_boolean.disable_entry_light_trent_home
+    - input_boolean.disable_entryway_light_frontdoor
 multisensor:
-  name: Multisensor
+  name: Multisensors
   entities:
     - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
 #    - sensor.fibaro_system_fgms001zw5_motion_sensor_sourcenodeid
@@ -176,3 +193,7 @@ multisensor:
 #    - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
     - binary_sensor.motion
     - binary_sensor.tampering
+    - binary_sensor.door_window_sensor_158d00019f3211
+    - binary_sensor.door_window_sensor_158d000186f0ec
+    - binary_sensor.motion_sensor_158d000165627b
+    

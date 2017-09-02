@@ -9,7 +9,6 @@
         vertical-align: top;
         position: relative;
       }
-
       [hidden] {
         display: none !important;
       }
@@ -30,7 +29,6 @@
 <script>
   Polymer({
     is: 'ha-panel-floorplan',
-
     properties: {
       hass: {
         type: Object,
@@ -52,13 +50,10 @@
         observer: 'panelChanged',
       }
     },
-
     panelChanged: function() {
       var hideAppToolbar = ((this.panel.config.hide_app_toolbar === null) ||
         (this.panel.config.hide_app_toolbar !== undefined));
       this.showAppToolbar = !hideAppToolbar;
     },
-
   });
-
 </script>

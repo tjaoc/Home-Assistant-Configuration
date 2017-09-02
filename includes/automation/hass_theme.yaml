@@ -4,6 +4,44 @@
 # 
 ############################################################
   
+############################################################
+#
+# Set Day Mode Theme on Start
+#
+############################################################
+    
+- alias: 'Set Day theme at startup'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition:
+    condition: sun
+    after: sunrise
+    after_offset: '+00:30:00'
+  action:
+  - service: frontend.set_theme
+    data:
+      name: default
+  
+############################################################
+#
+# Set Night Mode Theme on Start
+#
+############################################################
+    
+- alias: 'Set Night theme at startup'
+  initial_state: 'on'
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition:
+    condition: sun
+    after: sunset
+  action:
+  - service: frontend.set_theme
+    data:
+      name: darkblue
   
 ############################################################
 #
@@ -12,7 +50,6 @@
 ############################################################
 
 - alias: Set Day Mode Theme after Sunrise
-  initial_state: 'off'
   trigger:
   - platform: sun
     event: sunrise
@@ -29,11 +66,9 @@
 ############################################################
 
 - alias: Set Night Mode Theme after Sunset
-  initial_state: 'off'
   trigger:
   - platform: sun
     event: sunset
-    offset: '+00:00:00'
   action:
   - service: frontend.set_theme
     data:

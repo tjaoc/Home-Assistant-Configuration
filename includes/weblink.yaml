@@ -11,6 +11,8 @@ entities:
   - name: Synology
     url: !secret synology_url
     icon: mdi:network
+  - name: HADashboard
+    url: !secret hadash_url
   - name: Surveillance Station
     url: !secret surveillancestation_url
     icon: mdi:video

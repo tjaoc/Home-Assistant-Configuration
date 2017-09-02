@@ -7,10 +7,13 @@
 #Turn off devices
 good_night:
   sequence:
+    - service: light.turn_off
+      data:
+        entity_id: group.lights
     - service: switch.turn_off
       data:
         entity_id: group.lamps
-    - service: input_boolean.turn_off
+    - service: switch.turn_off
       data:
         entity_id: input_boolean.ifttt_office_lamp
     - service: media_player.turn_off
@@ -25,6 +28,11 @@ good_night:
     - service: media_player.turn_off
       data:
         entity_id: media_player.outside
-    
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.tv_ua55ju6400
+    - service: remote.turn_off
+      data:
+        entity_id: remote.living_room
         
 # Will add notification if devices are online (IE PC)

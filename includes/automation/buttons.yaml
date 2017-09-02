@@ -1,0 +1,21 @@
+############################################################
+#
+# Automation ifttt
+#
+############################################################
+  
+############################################################
+#
+# Bed Room Button - Good Night
+#
+############################################################
+
+- alias: Bed Room Button - Good Night
+  trigger:
+  - platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d0001a21086
+      click_type: single
+  action:
+  - service: script.good_night

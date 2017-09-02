@@ -44,7 +44,7 @@ frontend:
       paper-progress-secondary-color: "var(--sidebar-text_-_background)"
       paper-item-selected_-_background-color: "var(--primary-color)"
       paper-item-icon_-_color: "var(--text-primary-color)"
-      paper-item-icon-color: "var(--sidebar-text_-_background)"
+      paper-item-icon-color: "var(--text-primary-color)"
       paper-item-icon-active-color: "var(--primary-color)"
       paper-grey-50: "var(--sidebar-text_-_background)"
       paper-grey-200: "var(--primary-background-color)"
@@ -68,6 +68,10 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret hassconfig_url
+  terminal:
+    title: Terminal
+    icon: mdi:console-line
+    url: !secret terminal_url
 
 panel_custom: 
 # Floorplan Panel
@@ -191,6 +195,10 @@ remote:
   - platform: harmony
     name: !secret harmony_name
     host: !secret harmony_ip
+xiaomi:
+  gateways:
+   - mac:
+     key: !secret xiaomikey
 
 ############
 # Switches
