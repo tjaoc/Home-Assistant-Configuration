@@ -20,12 +20,25 @@ google_volume:
   
 ############################################################
 #
-# Home Assistant Air Conditioner (New)
+# Home Assistant Air Conditioner
 #
 ############################################################
+
 ac_target_temp:
   name: Set Target Temp
   min: 18
   max: 22
   step: 1
   initial: 21
+  
+############################################################
+#
+# Home Assistant Media Player Dimmer Living Room
+#
+############################################################
+
+mediaplayer_dimmer_livingroom:
+  name: '% Level'
+  min: 0
+  max: 75
+  step: 5

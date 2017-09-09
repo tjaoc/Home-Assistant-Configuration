@@ -46,3 +46,11 @@ disable_entryway_light_frontdoor:
   name: Disable Entryway Light When Frontdoor Open
   initial: off
   icon: mdi:home
+############################################################
+#
+# Home Assistant Media Player Dimmer Living Room
+#
+############################################################
+
+mediaplayer_dimmer_livingroom:
+  name: Dim Lights

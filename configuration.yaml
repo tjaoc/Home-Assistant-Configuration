@@ -157,7 +157,13 @@ mqtt:
 #  username: !secret cloud_mqtt_username
 #  password: !secret cloud_mqtt_password
 
-  
+# MQTT Control Panel
+alarm_control_panel:
+  - platform: manual_mqtt
+    state_topic: "home/alarm"
+    command_topic: "home/alarm/set"
+    code: !secret alarm_code
+
 #   Owntracks
 device_tracker:
 #   Owntracks
@@ -261,6 +267,7 @@ weblink: !include includes/weblink.yaml
 binary_sensor: !include includes/binary_sensor.yaml
 group: !include includes/group.yaml
 sensor: !include includes/sensor.yaml
+scene: !include includes/scene.yaml
 script: !include includes/script.yaml
 #image_processing: !include includes/image_processing.yaml
 

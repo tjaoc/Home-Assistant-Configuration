@@ -40,6 +40,7 @@ info_view:
     - group.network
     - group.synology
     - group.automation_override
+    - group.mediaplayer_dimmer_livingroom
     - group.multisensor
     - group.airconditioner
 # Groups
@@ -182,6 +183,11 @@ automation_override:
     - input_boolean.disable_device_tampering_notification
     - input_boolean.disable_entry_light_trent_home
     - input_boolean.disable_entryway_light_frontdoor
+mediaplayer_dimmer_livingroom:
+  name: Media Player Dimmer - Living Room
+  entities:
+    - input_boolean.mediaplayer_dimmer_livingroom
+    - input_slider.mediaplayer_dimmer_livingroom
 multisensor:
   name: Multisensors
   entities:
@@ -196,4 +202,6 @@ multisensor:
     - binary_sensor.door_window_sensor_158d00019f3211
     - binary_sensor.door_window_sensor_158d000186f0ec
     - binary_sensor.motion_sensor_158d000165627b
-    
+    - sensor.temperature_158d0001a2e878
+    - sensor.humidity_158d0001a2e878
+    - alarm_control_panel.ha_alarm

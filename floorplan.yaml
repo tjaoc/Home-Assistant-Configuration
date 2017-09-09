@@ -52,6 +52,7 @@
         - name: Sensors
           entities:
              - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+             - sensor.temperature_158d0001a2e878
              - sensor.weather_temperature
           text_template: '${entity.state ? entity.state : "unknown"}°C'
           # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
@@ -133,6 +134,17 @@
               class: 'mediaplayer-on'
             - state: 'playing'
               class: 'mediaplayer-on'
+              
+                #  DOORS  #
+        - name: Doors
+          entities:
+            - binary_sensor.door_window_sensor_158d00019f3211
+            - binary_sensor.door_window_sensor_158d000186f0ec
+          states:
+            - state: 'off'
+              class: 'door_closed'
+            - state: 'on'
+              class: 'door_open'
               
 #        - name: thermostat_temp
 #          entities:
