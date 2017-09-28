@@ -29,11 +29,13 @@
 #
 ############################################################
 
-- alias: Entryway Light Trent Arrives Home
+- alias: Entry Light Trent Arrives Home
   trigger:
-  - entity_id: device_tracker.hauser_trent
-    from: not_home
-    platform: state
+  - platform: state
+    entity_id: device_tracker.hauser_trent
+    to: home
+  - platform: state
+    entity_id: device_tracker.b0702d35b5da
     to: home
   condition:
     condition: and

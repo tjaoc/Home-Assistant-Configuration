@@ -25,6 +25,7 @@ doors_view:
   icon: mdi:security-home
   entities:
     - group.cameras
+    - group.security
 lights_view:
   view: yes
   icon: mdi:lightbulb
@@ -103,11 +104,19 @@ family:
   name: Family
   entities:
     - device_tracker.hauser_trent
-    - device_tracker.2c8a72bbc83c
+    - device_tracker.b0702d35b5da
 scripts:
   name: Scripts
   entities:
     - script.good_night
+security:
+  name: Security
+  entities:
+    - alarm_control_panel.ha_alarm
+    - binary_sensor.motion
+    - binary_sensor.motion_sensor_158d000165627b
+    - binary_sensor.door_window_sensor_158d00019f3211
+    - binary_sensor.door_window_sensor_158d000186f0ec
 cameras:
   name: Cameras
   entities:
@@ -204,4 +213,3 @@ multisensor:
     - binary_sensor.motion_sensor_158d000165627b
     - sensor.temperature_158d0001a2e878
     - sensor.humidity_158d0001a2e878
-    - alarm_control_panel.ha_alarm

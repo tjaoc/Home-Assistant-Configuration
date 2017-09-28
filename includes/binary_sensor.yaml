@@ -17,3 +17,23 @@
       device_class: motion
     tampering:
       value_template: '{{ is_state("sensor.fibaro_system_fgms001zw5_motion_sensor_burglar", "3") }}'
+
+############################################################
+#
+# Bayesian Sensor
+#
+############################################################
+      
+- platform: bayesian
+  prior: 0.75
+  name: 'Trent Home'
+  probability_threshold: 0.95
+  observations:
+    - entity_id: 'device_tracker.hauser_trent'
+      prob_given_true: 1
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: 'device_tracker.1867b0aa918f'
+      prob_given_true: 1
+      platform: 'state'
+      to_state: 'home'

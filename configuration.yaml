@@ -201,7 +201,7 @@ remote:
   - platform: harmony
     name: !secret harmony_name
     host: !secret harmony_ip
-xiaomi:
+xiaomi_aqara:
   gateways:
    - mac:
      key: !secret xiaomikey
@@ -242,14 +242,21 @@ zone:
   latitude: !secret zone_latitude
   longitude: !secret zone_longitude
   icon: mdi:server-network
-  radius: 200
+  radius: 250
 
 zone 2:
   name: !secret zone2_name
   latitude: !secret zone2_latitude
   longitude: !secret zone2_longitude
   icon: mdi:hospital-building
-  radius: 200
+  radius: 250
+  
+zone 3:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  icon: mdi:home
+  radius: 150
 
 ############
 # Includes
