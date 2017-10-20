@@ -5,6 +5,7 @@
 * [Raspberry Pi 3](http://amzn.to/2nMYhkX) - Hass.io Installed
 * [Aeotec Z-Stick Gen5](http://aeotec.com/z-wave-usb-stick)
 * [Synology DSM1815+ 8 Bay NAS](http://amzn.to/2ooPHdn)
+* [CyberPower CP1300EPFCLCD UPS](https://www.cyberpower.com/vn/en/product/sku/CP1300EPFCLCD)
 * [Reolink RLC-422-P IP Camera](http://amzn.to/2n0rHgs) x2
 * [Lenovo Tab 4, 8" Android Tablet](http://amzn.to/2vTO7V8) - Used with [HADashboard](https://play.google.com/store/apps/details?id=de.ozerov.fully) and [MQTT Alarm Control Panel](https://play.google.com/store/apps/details?id=com.thanksmister.iot.mqtt.alarmpanel)
 * [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor)
