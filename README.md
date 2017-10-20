@@ -37,6 +37,7 @@
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) forwarding to ensure Home Assistant doesn't lose sync whilst using it.
 * Turn on Entryway light for 10 minutes once I get home.
 * Weather notification at sunrise and sunset.
+* UPS status notification (On Battery / Low Battery / On Line)
 
 # Screenshots
 #### Day Theme

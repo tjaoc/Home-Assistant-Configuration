@@ -16,6 +16,7 @@
   - [x] Xiaomi Smart Door Sensors
   - [x] Xiaomi Smart Human Body Sensors
   - [x] Xiami Smart Wireless Switch
+  - [ ] Xiami Mi Smart Zigbee Socket (Use for Monitoring Washing Machine / Projector Power
   - [ ] Additional Components
 - [ ] Setup and wallmount Android Tablet with Dashboard
 - [ ] Update Floorplan with additional functionality
@@ -24,7 +25,7 @@
 - [ ] Implement Guest mode to disable certain interior automations. - Trigger via Google Home + IFTTT 
 - [ ] Implement lights to be turned off if noone is home and no motion detection
 - [ ] Setup Night and Day theme - Also apply to Floorplan
-- [ ] Purchase UPS and implement within HASS
+- [x] Purchase UPS and implement within HASS
 
 - [ ] Convince fiance that Home Automation is a good thing!
 
