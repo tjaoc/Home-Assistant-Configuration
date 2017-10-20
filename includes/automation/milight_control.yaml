@@ -35,7 +35,7 @@
     entity_id: device_tracker.hauser_trent
     to: home
   - platform: state
-    entity_id: device_tracker.b0702d35b5da
+    entity_id: device_tracker.rachels_iphone
     to: home
   condition:
     condition: and

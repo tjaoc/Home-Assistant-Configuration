@@ -20,7 +20,7 @@
   - platform: state
     entity_id: input_select.ac_swing_mode
   - platform: state
-    entity_id: input_slider.ac_target_temp    
+    entity_id: input_number.ac_target_temp    
   condition:
   - condition: state
     entity_id: input_select.ac_operation_mode

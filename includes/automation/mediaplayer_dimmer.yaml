@@ -30,7 +30,7 @@
   - service: light.turn_on
     data_template:
       entity_id: light.living_room
-      brightness_pct: '{{ states.input_slider.mediaplayer_dimmer_livingroom.state | int }}'
+      brightness_pct: '{{ states.input_number.mediaplayer_dimmer_livingroom.state | int }}'
       transition: '2'
 ############################################################
 #

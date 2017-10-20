@@ -1,0 +1,35 @@
+############################################################
+#
+# Home Assistant Weather Notification
+#
+############################################################
+
+- alias: 'Send notification when UPS is on battery'
+  trigger:
+  - platform: state
+    entity_id: sensor.ups_status_data
+    to: 'OB DISCHRG'
+  action:
+  - service: notify.html5_trent_galaxys8
+    data:
+      message: "Power Alert! The UPS has switched to Battery Power."  
+      
+- alias: 'Send notification when UPS is low battery'
+  trigger:
+  - platform: state
+    entity_id: sensor.ups_status_data
+    to: 'LB'
+  action:
+  - service: notify.html5_trent_galaxys8
+    data:
+      message: "Power Alert! The UPS has got Low Power."  
+
+- alias: 'Send notification when UPS is back on line'
+  trigger:
+  - platform: state
+    entity_id: sensor.ups_status_data
+    to: 'OL CHRG'
+  action:
+  - service: notify.html5_trent_galaxys8
+    data:
+      message: "Power Alert! The UPS is back On line."  

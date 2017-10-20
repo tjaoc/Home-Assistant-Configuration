@@ -40,6 +40,7 @@ info_view:
     - group.infolinks
     - group.network
     - group.synology
+    - group.ups
     - group.automation_override
     - group.mediaplayer_dimmer_livingroom
     - group.multisensor
@@ -90,21 +91,21 @@ radio:
   entities:
     - input_select.radio_player
     - input_select.radio_station
-    - input_slider.google_volume
+    - input_number.google_volume
 airconditioner:
   name: AC Split System
   entities:
     - input_select.ac_operation_mode
     - input_select.ac_fan_mode
     - input_select.ac_swing_mode
-    - input_slider.ac_target_temp
+    - input_number.ac_target_temp
     - sensor.ac_target
     - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
 family:
   name: Family
   entities:
     - device_tracker.hauser_trent
-    - device_tracker.b0702d35b5da
+    - device_tracker.rachels_iphone
 scripts:
   name: Scripts
   entities:
@@ -180,6 +181,14 @@ synology:
     - sensor.volume_used_volume_2
     - sensor.maximum_disk_temp_volume_2
     - sensor.status_volume_3
+ups:
+  name: "UPS"
+  entities:
+    - sensor.ups_status
+    - sensor.ups_load
+    - sensor.ups_battery_runtime_mins
+    - sensor.ups_battery_charge
+    - sensor.ups_nominal_real_power
 automation_override:
   name: Automation Override
   entities:
@@ -196,7 +205,7 @@ mediaplayer_dimmer_livingroom:
   name: Media Player Dimmer - Living Room
   entities:
     - input_boolean.mediaplayer_dimmer_livingroom
-    - input_slider.mediaplayer_dimmer_livingroom
+    - input_number.mediaplayer_dimmer_livingroom
 multisensor:
   name: Multisensors
   entities:

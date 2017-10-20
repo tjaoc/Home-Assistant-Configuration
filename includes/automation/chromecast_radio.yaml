@@ -80,7 +80,7 @@
 - alias: change volume google
   trigger:
   - platform: state
-    entity_id: input_slider.google_volume
+    entity_id: input_number.google_volume
   condition:
   - condition: template
     value_template: "{{ states.input_select.radio_player.state != 'OFF' }}"
@@ -99,4 +99,4 @@
         {% else %}
           "None"
         {% endif %}
-      volume_level: "{{ states.input_slider.google_volume.state | float / 10 }}"
+      volume_level: "{{ states.input_number.google_volume.state | float / 10 }}"

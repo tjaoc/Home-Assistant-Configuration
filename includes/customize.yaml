@@ -85,6 +85,10 @@ sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
 sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity:
   friendly_name: Living Room Seismic Intensity
   icon: mdi:vibrate
+sensor.ups_status:
+  icon: mdi:information-outline
+sensor.ups_battery_runtime_mins:
+  icon: mdi:timer
 binary_sensor.motion:
   friendly_name: Living Room Motion
 binary_sensor.tampering:

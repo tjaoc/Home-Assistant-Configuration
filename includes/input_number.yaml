@@ -1,0 +1,47 @@
+############################################################
+#
+# Home Assistant Input Number
+#
+############################################################
+
+############################################################
+#
+# Home Assistant Radio Controls
+#
+############################################################
+
+google_volume:
+  name: Volume
+  initial: 3
+  min: 0
+  max: 10
+  step: 0.5
+  mode: slider
+  icon: mdi:volume-medium
+  
+############################################################
+#
+# Home Assistant Air Conditioner
+#
+############################################################
+
+ac_target_temp:
+  name: Set Target Temp
+  min: 18
+  max: 22
+  step: 1
+  initial: 21
+  mode: slider
+  
+############################################################
+#
+# Home Assistant Media Player Dimmer Living Room
+#
+############################################################
+
+mediaplayer_dimmer_livingroom:
+  name: '% Level'
+  min: 0
+  max: 75
+  step: 5
+  mode: slider
