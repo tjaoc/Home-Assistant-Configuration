@@ -83,7 +83,7 @@
       value_template: '{{ states.input_number.ac_target_temp.state | int }}-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
     ac_setting_fan:
       friendly_name: 'Current AC Fan Setting'
-      value_template: 'FAN-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}' 
+      value_template: 'FAN-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
     ac_target:
       friendly_name: 'Target Temperature'
       value_template: '{{ states.input_number.ac_target_temp.state | int }}'
@@ -105,7 +105,7 @@
       value_template: "{{ 'Online' if is_state('device_tracker.a477337ee656', 'home') else 'Offline' }}"
     bedroomchromecast:
       friendly_name: 'Bed Room Chromecast'
-      value_template: "{{ 'Online' if is_state('device_tracker.80d21d2c642a', 'home') else 'Offline' }}" 
+      value_template: "{{ 'Online' if is_state('device_tracker.80d21d2c642a', 'home') else 'Offline' }}"
     outsidechromecast:
       friendly_name: 'Outside Chromecast Audio'
       value_template: "{{ 'Online' if is_state('device_tracker.546009dca412', 'home') else 'Offline' }}"
@@ -116,38 +116,38 @@
     ups_status:
       friendly_name: 'UPS Status'
       value_template: >-
-        {% if is_state('sensor.ups_status_data', 'OL') %}
-          On line
-        {% elif is_state('sensor.ups_status_data', 'OL CHRG') %}
+        {% if is_state('sensor.ups_status_data', 'OL CHRG') %}
           On line Charging
         {% elif is_state('sensor.ups_status_data', 'OB DISCHRG') %}
           On Battery
-        {% elif is_state('sensor.ups_status_data', 'LB') %}
-          Low battery
-        {% elif is_state('sensor.ups_status_data', 'SD') %}
+        {% elif 'LB' in states.sensor.ups_status_data.state %}
+           Low battery
+        {% elif 'OL' in states.sensor.ups_status_data.state %}
+           On line
+        {% elif 'SD' in states.sensor.ups_status_data.state %}
           Shutdown load
-        {% elif is_state('sensor.ups_status_data', 'CP') %}
+        {% elif 'CP' in states.sensor.ups_status_data.state %}
           Cable power
-        {% elif is_state('sensor.ups_status_data', 'CTS') %}
+        {% elif 'CTS' in states.sensor.ups_status_data.state %}
           Clear to Send
-        {% elif is_state('sensor.ups_status_data', 'RTS') %}
+        {% elif 'RTS' in states.sensor.ups_status_data.state %}
           Ready to Send
-        {% elif is_state('sensor.ups_status_data', 'DCD') %}
+        {% elif 'DCD' in states.sensor.ups_status_data.state %}
           Data Carrier Detect
-        {% elif is_state('sensor.ups_status_data', 'RNG') %}
+        {% elif 'RNG' in states.sensor.ups_status_data.state %}
           Ring indicate
-        {% elif is_state('sensor.ups_status_data', 'DTR') %}
+        {% elif 'DTR' in states.sensor.ups_status_data.state %}
           Data Terminal Ready
-        {% elif is_state('sensor.ups_status_data', 'ST') %}
+        {% elif 'ST' in states.sensor.ups_status_data.state %}
           Send Break
         {% endif %}
     ups_battery_runtime_mins:
       friendly_name: 'UPS Battery Runtime'
       unit_of_measurement: 'minutes'
       value_template: "{{ states('sensor.ups_battery_runtime')|float / 60 |round(2)}}"
-      
+
 # API Stream Sensor
-- platform: api_streams 
+- platform: api_streams
 
 # Scrape sensor for BOM weather forecasts
 - platform: scrape
@@ -155,7 +155,7 @@
   name: Weather Maximum
   select: '.max'
   unit_of_measurement: '°C Max'
-    
+
 - platform: scrape
   resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
   name: Weather Minimum
@@ -167,21 +167,21 @@
   name: Melbourne summary
   select: 'p:nth-of-type(4)'
   # unit_of_measurement: 'Nil'
-   
+
 - platform: scrape
   resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
   name: Melbourne UV forecast
   select: 'p:nth-of-type(5)'
   # unit_of_measurement: 'Nil'
 
-    
+
 - platform: scrape
   resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
   name: Melbourne forecast line3
   select: 'p:nth-of-type(6)'
   # unit_of_measurement: 'Nil'
 
-- platform: openweathermap 
+- platform: openweathermap
   api_key: !secret openweathermap_api
   forecast: 0
   monitored_conditions:
