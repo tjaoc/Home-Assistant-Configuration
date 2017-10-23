@@ -34,10 +34,9 @@
 #    - apparent_temperature_max
 #    - apparent_temperature_min
 #    - precip_intensity_max
-# Uptime
-- platform: command_line
-  name: piuptime
-  command: uptime | sed 's/.*up \([^,]*\), .*/\1/'
+
+# Uptime Sensor
+- platform: uptime
 
 # Current Time and Date
 - platform: time_date

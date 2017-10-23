@@ -26,9 +26,6 @@ sensor.speedtest_upload:
   icon: 'mdi:speedometer'
 sensor.speedtest_ping:
   icon: 'mdi:speedometer'
-sensor.piuptime:
-  friendly_name: HASSBian Uptime
-  icon: 'mdi:clock-start'
 sensor.nzbget_speed:
   friendly_name: Current NZBGet Speed
   icon: 'mdi:download'
@@ -97,7 +94,7 @@ binary_sensor.tampering:
 script.good_night:
   friendly_name: Good Night
   icon: mdi:sleep
-  
+
 # Hidden Items
 media_player._ua55ju6400_ua55ju6400:
   hidden: true

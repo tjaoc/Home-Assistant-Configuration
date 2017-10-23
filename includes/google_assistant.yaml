@@ -1,0 +1,12 @@
+############################################################
+#
+# Home Assistant Google Assistant
+#
+############################################################
+project_id: !secret gh_project_id
+client_id: !secret gh_client_id
+access_token: !secret gh_access_token
+expose_by_default: true
+exposed_domains:
+  - switch
+  - light

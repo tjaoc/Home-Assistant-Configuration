@@ -162,7 +162,7 @@ network:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.nzbget_speed
-    - sensor.piuptime
+    - sensor.uptime
     - sensor.livingroomgooglehome
     - sensor.livingroomtv
     - sensor.livingroomchromecast

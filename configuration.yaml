@@ -12,12 +12,12 @@ homeassistant:
   time_zone: Australia/Melbourne
   # Include Packages
   packages: !include_dir_named packages
- 
+
 # Customizations
   customize: !include includes/customize.yaml
   customize_domain: {}
   customize_glob: {}
-  
+
 # Enables the frontend
 frontend:
   themes:
@@ -75,14 +75,14 @@ panel_iframe:
     icon: mdi:console-line
     url: !secret terminal_url
 
-panel_custom: 
+panel_custom:
 # Floorplan Panel
   - name: floorplan
     sidebar_title: Floorplan
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
-  
+
 # Checks for available updates
 updater:
 
@@ -108,19 +108,19 @@ sun:
 
 # Text to speech
 tts:
-  platform: google  
-  
+  platform: google
+
 # Purge Database Interval
 recorder:
   purge_interval: 2
   purge_keep_days: 14
-  
+
 # Media Player
 media_player:
   - platform: spotify
     client_id: !secret spotify_client_id
     client_secret: !secret spotify_client_secret
-    
+
 # Camera (Synology)
 camera:
   - platform: synology
@@ -141,7 +141,7 @@ camera:
 #    username: !secret sensor_onvif_username
 #    password: !secret sensor_onvif_password
 #    port: !secret sensor_onvif_port
-    
+
 # Microsoft Face - Testing
 #microsoft_face:
 #  api_key: !secret microsoftface_api
@@ -154,13 +154,13 @@ ifttt:
 ios:
 
 # Device Tracking
-# MQTT (Local Broker)     
+# MQTT (Local Broker)
 mqtt:
   broker: !secret local_mqtt_broker
   port: !secret local_mqtt_port
   username: !secret local_mqtt_username
   password: !secret local_mqtt_password
-  
+
 #  broker: !secret cloud_mqtt_broker
 #  port: !secret cloud_mqtt_port
 #  username: !secret cloud_mqtt_username
@@ -180,10 +180,10 @@ device_tracker:
 #   Router Based Device Tracking
   - platform: nmap_tracker
     hosts: 192.168.1.1/24
-    exclude: 
+    exclude:
      - 192.168.1.105
      - 192.168.1.100
-     
+
 #ZWave Devices
 zwave:
   usb_path: /dev/ttyACM0
@@ -195,16 +195,7 @@ notify:
   - platform: html5
     gcm_api_key: !secret html5_gcm_api
     gcm_sender_id: !secret html5_gcm_sender
-    
-# Google Assistant Emulated Hue
-emulated_hue:
-    host_ip: !secret hassbian_ip
-#    Google Assistant only Supports Port 80 although it cannot be used due to docker setup.
-    listen_port: 80
-    expose_by_default: true
-    exposed_domains:
-      - light
-      - switch
+
 # Logitech Harmony Living Room
 remote:
   - platform: harmony
@@ -259,7 +250,7 @@ zone 2:
   longitude: !secret zone2_longitude
   icon: mdi:hospital-building
   radius: 250
-  
+
 zone 3:
   name: Home
   latitude: !secret home_latitude
@@ -282,6 +273,7 @@ light: !include includes/light.yaml
 weblink: !include includes/weblink.yaml
 binary_sensor: !include includes/binary_sensor.yaml
 group: !include includes/group.yaml
+google_assistant: !include includes/google_assistant.yaml
 sensor: !include includes/sensor.yaml
 scene: !include includes/scene.yaml
 script: !include includes/script.yaml
