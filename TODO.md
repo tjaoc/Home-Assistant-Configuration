@@ -16,7 +16,7 @@
   - [x] Xiaomi Smart Door Sensors
   - [x] Xiaomi Smart Human Body Sensors
   - [x] Xiami Smart Wireless Switch
-  - [ ] Xiami Mi Smart Zigbee Socket (Use for Monitoring Washing Machine / Projector Power
+  - [x] Xiami Mi Smart Zigbee Socket (Use for Monitoring Washing Machine / Projector Power)
   - [ ] Additional Components
 - [ ] Setup and wallmount Android Tablet with Dashboard
 - [ ] Update Floorplan with additional functionality
