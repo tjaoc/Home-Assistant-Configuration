@@ -31,8 +31,8 @@ radio_player:
     - "None"
   initial: "None"
   icon: mdi:cast
-  
-  
+
+
 ############################################################
 #
 # Home Assistant Harmony Controls
@@ -50,7 +50,7 @@ harmony:
     - Play Wii U
     - Power Off
   icon: mdi:remote
-  
+
 ############################################################
 #
 # Home Assistant Air Conditioner Control
@@ -80,3 +80,18 @@ ac_swing_mode:
    - TOP
    - SWING
   icon: mdi:arrow-expand
+
+############################################################
+#
+# Home Assistant Washing Machine Monitor
+#
+############################################################
+
+washing_machine_status:
+  name: Washing Machine Status
+  options:
+    - Idle
+    - Running
+    - Finishing
+    - Clean
+  initial: Idle

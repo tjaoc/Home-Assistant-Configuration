@@ -3,7 +3,7 @@
 # Automation Alarm
 #
 ############################################################
-  
+
 ############################################################
 #
 # Trigger alarm while armed away
@@ -37,7 +37,7 @@
   action:
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.ha_alarm
-    
+
 ############################################################
 #
 # Start Police Siren on Alarm Trigger via Xiaomi Gateway
@@ -50,11 +50,21 @@
     entity_id: alarm_control_panel.ha_alarm
     to: 'triggered'
   action:
-    service: xiaomi.play_ringtone
+  - service: xiaomi.play_ringtone
     data:
       gw_mac: !secret xiaomimac
       ringtone_id: 10001
       ringtone_vol: 100
+  - service: light.turn_on
+    entity_id: group.all_lights
+  - service: notify.html5_trent_galaxys8
+    data:
+      message: "Police Siren has been triggered at home"
+      data:
+        actions:
+        - action: open
+          title: Open Home Assistant
+          url: https://ha.stanvx.myds.me
 
 ############################################################
 #

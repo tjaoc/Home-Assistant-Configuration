@@ -31,7 +31,6 @@ lights_view:
   icon: mdi:lightbulb
   entities:
     - group.lights
-    - group.templights
     - group.switches
 info_view:
   view: yes
@@ -40,6 +39,7 @@ info_view:
     - group.infolinks
     - group.network
     - group.synology
+    - group.washing_machine
     - group.ups
     - group.automation_override
     - group.mediaplayer_dimmer_livingroom
@@ -128,16 +128,10 @@ lights:
   entities:
     - light.entry
     - light.entryway
-    - light.study_desk_lamp
-templights:
-  name: Temp Lights
-  entities:
     - light.living_room
-    - light.kitchen
-    - light.dining_room
-    - light.study
     - light.projector_room
-    - light.bed_room
+    - light.trent_bedside
+    - light.study_desk_lamp
 switches:
   name: Switches
   entities:
@@ -181,6 +175,12 @@ synology:
     - sensor.volume_used_volume_2
     - sensor.maximum_disk_temp_volume_2
     - sensor.status_volume_3
+washing_machine:
+  name: "Washing Machine"
+  entities:
+    - sensor.washing_machine_status
+    - switch.plug_158d0001debe7a
+    - sensor.washing_machine_status
 ups:
   name: "UPS"
   entities:

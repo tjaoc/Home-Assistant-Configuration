@@ -15,7 +15,6 @@
   rgb: true
   brightness: true
   effect: true
-  retain: true
 
 - platform: mqtt_json
   name: "Entry"
@@ -25,7 +24,6 @@
   rgb: true
   brightness: true
   effect: true
-  retain: true
 
 - platform: mqtt_json
   name: "Projector Room"
@@ -35,17 +33,6 @@
   rgb: true
   brightness: true
   effect: true
-  retain: true
-
-- platform: mqtt_json
-  name: "Study"
-  command_topic: milight/commands/0x11/rgb_cct/4
-  state_topic: milight/updates/0x11/rgb_cct/4
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-  retain: true
 
 - platform: mqtt_json
   name: "Living Room"
@@ -55,37 +42,6 @@
   rgb: true
   brightness: true
   effect: true
-  retain: true
-
-- platform: mqtt_json
-  name: "Kitchen"
-  command_topic: milight/commands/0x12/rgb_cct/2
-  state_topic: milight/updates/0x12/rgb_cct/2
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-  retain: true
-
-- platform: mqtt_json
-  name: "Dining Room"
-  command_topic: milight/commands/0x12/rgb_cct/3
-  state_topic: milight/updates/0x12/rgb_cct/3
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-  retain: true
-
-- platform: mqtt_json
-  name: "Bed Room"
-  command_topic: milight/commands/0x12/rgb_cct/4
-  state_topic: milight/updates/0x12/rgb_cct/4
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-  retain: true
 
 
 ############
@@ -96,3 +52,5 @@
     192.168.1.85:
       name: Study Desk Lamp
       transition: 1000
+    192.168.1.58:
+      name: Trent Bedside

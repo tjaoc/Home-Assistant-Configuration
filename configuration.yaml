@@ -190,12 +190,6 @@ zwave:
 #  polling_interval: 60000
 #  autoheal: true
 
-#   Notifications via HTML5
-notify:
-  - platform: html5
-    gcm_api_key: !secret html5_gcm_api
-    gcm_sender_id: !secret html5_gcm_sender
-
 # Logitech Harmony Living Room
 remote:
   - platform: harmony
@@ -270,6 +264,7 @@ input_boolean: !include includes/input_boolean.yaml
 input_select: !include includes/input_select.yaml
 input_number: !include includes/input_number.yaml
 light: !include includes/light.yaml
+notify: !include includes/notify.yaml
 weblink: !include includes/weblink.yaml
 binary_sensor: !include includes/binary_sensor.yaml
 group: !include includes/group.yaml

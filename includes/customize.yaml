@@ -65,12 +65,20 @@ sensor.temperature_158d0001a2e878:
 sensor.humidity_158d0001a2e878:
   friendly_name: Bedroom Humidity
   icon: mdi.water-percent
+sensor.washing_machine_status:
+  icon: mdi:washing-machine
+switch.plug_158d0001debe7a:
+  friendly_name: Washing Machine Switch
+binary_sensor.switch_158d00016449a2:
+  friendly_name: Laundry Switch
 binary_sensor.switch_158d0001a21086:
   friendly_name: Bedroom Switch
 binary_sensor.door_window_sensor_158d000186f0ec:
   friendly_name: Back Door Sensor
+  icon: mdi:door
 binary_sensor.door_window_sensor_158d00019f3211:
   friendly_name: Front Door Sensor
+  icon: mdi:door
 binary_sensor.motion_sensor_158d000165627b:
   friendly_name: Hallway Motion
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:

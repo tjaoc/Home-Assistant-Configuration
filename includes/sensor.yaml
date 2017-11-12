@@ -144,7 +144,15 @@
       friendly_name: 'UPS Battery Runtime'
       unit_of_measurement: 'minutes'
       value_template: "{{ states('sensor.ups_battery_runtime')|float / 60 |round(2)}}"
-
+# Washing Machine Status
+    washing_machine_status:
+      value_template: '{{ states.input_select.washing_machine_status.state}}'
+      friendly_name: 'Washing Machine Status'
+# Washing Machine Power Usage
+    waching_machine_power:
+      entity_id: switch.plug_158d0001debe7a
+      value_template: '{{ state.attributes.load_power }}'
+      friendly_name: 'Washing Machine Power'
 # API Stream Sensor
 - platform: api_streams
 
