@@ -46,6 +46,10 @@ disable_entryway_light_frontdoor:
   name: Disable Entryway Light When Frontdoor Open
   initial: off
   icon: mdi:home
+disable_washing_machine_notification:
+  name: Disable Washing Machine Notification
+  initial: off
+  icon: mdi:washing-machine
 ############################################################
 #
 # Home Assistant Media Player Dimmer Living Room

@@ -259,7 +259,7 @@ zone 3:
 # Single Files
 
 automation: !include automations.yaml
-#apiai: !include includes/apiai.yaml
+dialogflow: !include includes/dialogflow.yaml
 input_boolean: !include includes/input_boolean.yaml
 input_select: !include includes/input_select.yaml
 input_number: !include includes/input_number.yaml

@@ -134,6 +134,9 @@
       - condition: state
         entity_id: input_select.washing_machine_status
         state: Clean
+      - condition: state
+        entity_id: input_boolean.disable_washing_machine_notification
+        state: 'off'
       - condition: template
         value_template: >
           {% if states.automation.send_alert_when_washing_machine_is_finished.last_triggered is not none %}

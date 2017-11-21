@@ -102,6 +102,13 @@ binary_sensor.tampering:
 script.good_night:
   friendly_name: Good Night
   icon: mdi:sleep
+script.start_air_conditioner:
+  friendly_name: Start Air Conditioner
+  icon: mdi:air-conditioner
+script.stop_air_conditioner:
+  friendly_name: Stop Air Conditioner
+  icon: mdi:air-conditioner
+
 
 # Hidden Items
 media_player._ua55ju6400_ua55ju6400:
