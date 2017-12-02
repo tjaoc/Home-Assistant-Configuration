@@ -108,6 +108,9 @@ script.start_air_conditioner:
 script.stop_air_conditioner:
   friendly_name: Stop Air Conditioner
   icon: mdi:air-conditioner
+switch.air_conditioner:
+  friendly_name: Air Conditioner
+  icon: mdi:air-conditioner
 
 
 # Hidden Items

@@ -3,7 +3,7 @@
 # Chromecast Radio Control
 #
 ############################################################
-  
+
 ############################################################
 #
 # Stop Streaming Radio on Chromecast
@@ -23,8 +23,8 @@
             media_player.living_room_home
           {%-elif is_state("input_select.radio_player", "Living Room Chromecast") %}
             media_player.living_room
-          {%-elif is_state("input_select.radio_player", "Bed Room Chromecast") %}
-            media_player.bed_room
+          {%-elif is_state("input_select.radio_player", "Bed Room Home") %}
+            media_player.bedroom_speaker
           {%-elif is_state("input_select.radio_player", "Outside Chromecast Audio") %}
             media_player.outside
           {% else %}
@@ -48,8 +48,8 @@
           media_player.living_room_home
         {%-elif is_state("input_select.radio_player", "Living Room Chromecast") %}
           media_player.living_room
-        {%-elif is_state("input_select.radio_player", "Bed Room Chromecast") %}
-          media_player.bed_room
+        {%-elif is_state("input_select.radio_player", "Bed Room Home") %}
+          media_player.bedroom_speaker
         {%-elif is_state("input_select.radio_player", "Outside Chromecast Audio") %}
           media_player.outside
         {% else %}
@@ -63,14 +63,14 @@
         {%-elif is_state("input_select.radio_station", "Nova 100") %}
           http://streaming.novaentertainment.com.au/nova100
         {%-elif is_state("input_select.radio_station", "SmoothFM") %}
-          http://streaming.novaentertainment.com.au/smooth915 
+          http://streaming.novaentertainment.com.au/smooth915
         {%-elif is_state("input_select.radio_station", "SBS Chill") %}
           http://shoutcast.sbs.com.au/SBSChill
         {% else %}
           "None"
         {% endif %}
       media_content_type: 'audio/mp4'
-      
+
 ############################################################
 #
 # Adjust Volume on Chromecast
@@ -92,8 +92,8 @@
           media_player.living_room_home
         {% elif is_state("input_select.radio_player", "Living Room Chromecast") %}
           media_player.living_room
-        {% elif is_state("input_select.radio_player", "Bed Room Chromecast") %}
-          media_player.bedroomchromecast
+        {% elif is_state("input_select.radio_player", "Bed Room Home") %}
+          media_player.bedroom_speaker
         {%-elif is_state("input_select.radio_player", "Outside Chromecast Audio") %}
           media_player.outside
         {% else %}

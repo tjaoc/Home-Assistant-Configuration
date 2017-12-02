@@ -58,4 +58,55 @@ stop_air_conditioner:
       data:
         entity_id: input_select.ac_operation_mode
         option: Power Off
-# Will add notification if devices are online (IE PC)
+# Script to send notifications to the ChromeCast Audios during normal hours and only when we are home! Call like this:
+  # action:
+    # service: script.speech_processing
+    # data_template:
+    #   speech_message:
+# Original Repo : https://github.com/CCOSTAN/Home-AssistantConfig
+
+speech_processing:
+  sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: 'polly/lastmsg'
+        payload: 'This Message is from {{now().strftime("%I")}}:{{now().strftime("%M")}} {{now().strftime("%p")}}. {{speech_message}}'
+        retain: true
+
+    - condition: and
+      conditions:
+        - condition: or
+          conditions:
+            - condition: state
+              entity_id: group.family
+              state: 'home'
+            - condition: state
+              entity_id: input_boolean.guest_mode
+              state: 'on'
+        - condition: or
+          conditions:
+            - condition: time
+              after: '08:00:00'
+              before: '20:00:00'
+            - condition: state
+              entity_id: input_boolean.alert_mode
+              state: 'on'
+        - condition: state
+          entity_id: input_boolean.speech_notifications
+          state: 'on'
+
+    - service: tts.amazon_polly_say
+      entity_id:
+        - media_player.living_room_home
+        - media_player.bedroom_speaker
+      data_template:
+        message: >
+          <speak>
+          {{speech_message}}
+          </speak>
+        cache: true
+
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.alert_mode
+        - input_boolean.lastmsg

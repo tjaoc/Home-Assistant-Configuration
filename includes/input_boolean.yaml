@@ -4,12 +4,18 @@
 #
 ############################################################
 
-############################################################
-#
-# Home Assistant Automation Override
-#
-############################################################
-
+guest_mode:
+  name: Guest Mode
+  initial: off
+  icon: mdi:account-alert
+alert_mode:
+  name: Alert Mode
+  initial: off
+  icon: mdi:alert-octagram
+speech_notifications:
+  name: Speech Notifications
+  initial: on
+  icon: mdi:text-to-speech
 disable_auto_living_room_lamp:
   name: Disable Auto Living Room Lamp
   initial: on

@@ -108,7 +108,12 @@ sun:
 
 # Text to speech
 tts:
-  platform: google
+#- platform: google
+- platform: amazon_polly
+  aws_access_key_id: !secret aws_access_key_ID
+  aws_secret_access_key: !secret aws_secret_access_key
+  text_type: ssml
+  voice: Joanna
 
 # Purge Database Interval
 recorder:
@@ -201,34 +206,6 @@ xiaomi_aqara:
      key: !secret xiaomikey
 
 ############
-# Switches
-############
-switch 1:
-  - platform: broadlink
-    host: !secret broadlink_sw1_ip
-    mac: '34:EA:34:F5:E4:AC'
-    type: spmini2
-    friendly_name: 'Living Room Lamp'
-switch 2:
-  - platform: broadlink
-    host: !secret broadlink_sw2_ip
-    mac: '34:EA:34:F5:E4:B0'
-    type: spmini2
-    friendly_name: 'Bed Rachel Lamp'
-switch 3:
-  - platform: broadlink
-    host: !secret broadlink_sw3_ip
-    mac: '34:EA:34:F5:E1:18'
-    type: spmini2
-    friendly_name: 'Bed Trent Lamp'
-switch 4:
-  - platform: broadlink
-    host: !secret broadlink_sw4_ip
-    mac: '34:EA:34:F5:E4:F7'
-    type: spmini2
-    friendly_name: 'Outside Heater'
-
-############
 # Additional Zones
 ############
 zone:
@@ -258,8 +235,8 @@ zone 3:
 
 # Single Files
 
-automation: !include automations.yaml
-dialogflow: !include includes/dialogflow.yaml
+#automation: !include automations.yaml
+#dialogflow: !include includes/dialogflow.yaml
 input_boolean: !include includes/input_boolean.yaml
 input_select: !include includes/input_select.yaml
 input_number: !include includes/input_number.yaml
@@ -272,10 +249,11 @@ google_assistant: !include includes/google_assistant.yaml
 sensor: !include includes/sensor.yaml
 scene: !include includes/scene.yaml
 script: !include includes/script.yaml
+switch: !include includes/switch.yaml
 #image_processing: !include includes/image_processing.yaml
 
 
 # Merge List
 
 # Non Editor Automations
-automation old: !include_dir_merge_list includes/automation
+automation: !include_dir_merge_list includes/automation

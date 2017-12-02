@@ -3,7 +3,7 @@
 # Fibaro MultiSensor.
 #
 ############################################################
-  
+
 ############################################################
 #
 # Motion Sensor Turn on living_room_lamp
@@ -22,9 +22,9 @@
   action:
   - service: homeassistant.turn_on
     entity_id: switch.living_room_lamp
-  
-    
-    
+
+
+
 ############################################################
 #
 # Notification Actions
@@ -41,7 +41,7 @@
   action:
   - service: homeassistant.turn_on
     entity_id: switch.living_room_lamp
-  
+
 ############################################################
 #
 # Current Temperature Notification (Sends a notification and asks about starting the air conditioner)
@@ -73,8 +73,8 @@
         entity_id: device_tracker.trent_trent
         state: '!secret work_state'
   action:
-  - service: notify.html5_trent_galaxys8
-    data_template: 
+  - service: notify.trent
+    data_template:
       title: "Home Temperature"
       message: "Home is currently at {{ states.sensor.fibaro_system_fgms001zw5_motion_sensor_temperature.state }} °C."
       data:
@@ -84,7 +84,7 @@
           url: https://ha.stanvx.myds.me
         - action: startac
           title: Start AC
-  
+
 ############################################################
 #
 # Burgular Notification (Unexpected motion whilst away)
@@ -117,7 +117,7 @@
   - service: notify.html5_trent_galaxys8
     data_template:
       message: "Unexpected Motion in Living Room Detected!"
-      
+
 ############################################################
 #
 # Burgular Notification (Tampering)

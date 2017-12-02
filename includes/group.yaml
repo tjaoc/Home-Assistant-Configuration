@@ -14,6 +14,7 @@ default_view:
     - group.media_living_room_tv
     - group.media_living_room
     - group.media_bed_room
+    - group.media_bedroom_speaker
     - group.media_outside
     - group.media_spotify
     - group.harmony
@@ -26,6 +27,7 @@ doors_view:
   entities:
     - group.cameras
     - group.security
+    - group.airconditioner
 lights_view:
   view: yes
   icon: mdi:lightbulb
@@ -44,8 +46,11 @@ info_view:
     - group.automation_override
     - group.mediaplayer_dimmer_livingroom
     - group.multisensor
-    - group.airconditioner
-# Groups
+    - group.trash_schedule
+    - group.recycle_schedule
+    - group.date
+    - group.date_time
+    # Groups
 weather:
   name: Weather
   entities:
@@ -73,6 +78,10 @@ media_bed_room:
   name: Media Bed Room
   entities:
     - media_player.bed_room
+media_bedroom_speaker:
+  name: Media Bed Room Speaker
+  entities:
+    - media_player.bedroom_speaker
 media_outside:
   name: Media Outside
   entities:
@@ -133,13 +142,12 @@ lights:
     - light.living_room
     - light.projector_room
     - light.trent_bedside
+    - light.rachel_bedside
     - light.study_desk_lamp
 switches:
   name: Switches
   entities:
     - switch.living_room_lamp
-    - switch.bed_rachel_lamp
-    - switch.bed_trent_lamp
     - switch.outside_heater
 infolinks:
   name: Links
@@ -193,6 +201,11 @@ ups:
 automation_override:
   name: Automation Override
   entities:
+    - input_boolean.guest_mode
+    - input_boolean.alert_mode
+    - input_boolean.speech_notifications
+    - input_boolean.lastmsg
+    - switch.air_conditioner
     - input_boolean.disable_auto_living_room_lamp
     - input_boolean.disable_media_player_light_control
     - input_boolean.disable_current_temperature_notification
