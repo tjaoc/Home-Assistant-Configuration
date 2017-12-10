@@ -86,11 +86,9 @@
 # This is a temporary solution until door sensor arrives
 - alias: Set washing machine dirty with single click of laundry button
   trigger:
-    - platform: event
-      event_type: click
-      event_data:
-        entity_id: binary_sensor.switch_158d00016449a2
-        click_type: single
+    - platform: state
+      entity_id: binary_sensor.door_window_sensor_158d00019f886a
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -146,6 +144,12 @@
           false
           {% endif %}
   action:
+    - service: script.speech_processing
+      data_template:
+        speech_message: >
+         {% if (is_state('device_tracker.hauser_trent', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
+           Attention!: the washing machine has finished and is ready to be emptied.
+         {% endif %}
     - service_template: >
         {% if (is_state('device_tracker.hauser_trent', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
           notify.trent_and_rachel

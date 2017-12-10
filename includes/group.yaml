@@ -27,6 +27,7 @@ doors_view:
   entities:
     - group.cameras
     - group.security
+    - group.doorandwindowsensors
     - group.airconditioner
 lights_view:
   view: yes
@@ -232,8 +233,15 @@ multisensor:
 #    - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
     - binary_sensor.motion
     - binary_sensor.tampering
-    - binary_sensor.door_window_sensor_158d00019f3211
-    - binary_sensor.door_window_sensor_158d000186f0ec
     - binary_sensor.motion_sensor_158d000165627b
     - sensor.temperature_158d0001a2e878
     - sensor.humidity_158d0001a2e878
+doorandwindowsensors:
+  name: Door and Window Sensors
+  entities:
+    - binary_sensor.door_window_sensor_158d00019f3211
+    - binary_sensor.door_window_sensor_158d000186f0ec
+    - binary_sensor.door_window_sensor_158d0001d7acfc
+    - binary_sensor.door_window_sensor_158d0001e037dc
+    - binary_sensor.door_window_sensor_158d00019fbe38
+    - binary_sensor.door_window_sensor_158d0001a4a872
