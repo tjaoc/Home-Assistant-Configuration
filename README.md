@@ -14,8 +14,10 @@
 * [Milight WiFi Gateway Emulator](https://github.com/sidoh/esp8266_milight_hub) (NodeMCU ESP8266 / NRF24L01+ module) - Allows for controlling an unlimited amount of LimitlessLED Light groups via MQTT Protocol
 * [LimitlessLED Full Color and Dual White Downlight](http://www.limitlessled.com/shop/mr16-rgbw-ww-cw-color-and-white-led) - Smart Dimmable Full Color Downlights
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) - Smart Light Remote Control [HASS Integrated](https://github.com/sidoh/esp8266_milight_hub/wiki/Using-Milight-Remote-with-HomeAssistant)
+* [Xiaomi Yeelight RGBW E27](https://www.gearbest.com/smart-lighting/pp_361555.html) - Bedside Lamps
 * [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
-* [Google Home](https://madeby.google.com/home) - Voice Assistant/Control
+* [Google Home](https://store.google.com/product/google_home) - Voice Assistant/Control
+* [Google Home Mini](https://store.google.com/product/google_home_mini) - Voice Assistant/Control
 * [Google Chromecast 1](https://www.google.com.au/chromecast/tv/chromecast)
 * [Google Chromecast 2](https://www.google.com.au/chromecast/tv/chromecast)
 * [Google Chromecast Audio](https://www.google.com.au/intl/en_au/chromecast/audio)
@@ -24,6 +26,7 @@
 * [Plex Media Server](https://plex.tv) - Media Streaming
 
 # Automations
+* Voice Notifications on Google Home's via Amazon Polly TTS component.
 * Stream radio stations onto Chromecasts and control their volume.
 * On motion from [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor) turn on lights.
 * Burgular Alarm from Xiaomi Gateway when alarm panel is Armed and triggered.
@@ -38,6 +41,7 @@
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) forwarding to ensure Home Assistant doesn't lose sync whilst using it.
 * Turn on Entryway light for 10 minutes once I get home.
 * Weather notification at sunrise and sunset.
+* Trash and Recycle Bin night reminders - Thanks [CCOSTAN]!(https://github.com/CCOSTAN/Home-AssistantConfig)
 * UPS status notification (On Battery / Low Battery / On Line)
 
 # Screenshots
