@@ -1,0 +1,71 @@
+###############################################################################
+#   @author         :   Trent Stanton
+#   @date           :   01/08/2017
+#   @package        :   Xiaomi Robot Vacuum
+#   @description    :   Xiaomi Robot Vacuum Control and Schedule
+###############################################################################
+homeassistant:
+  customize:
+    input_boolean.disable_daily_vacuum:
+      icon: mdi:stop-circle-outline
+
+group:
+  Robot Vacuum:
+    entities:
+      - vacuum.xiaomi_vacuum_cleaner
+      - input_boolean.disable_daily_vacuum
+
+vacuum:
+  - platform: xiaomi_miio
+    host: !secret xiaomi_vacuum_ip
+    token: !secret xiaomi_vacuum_token
+
+input_boolean:
+  daily_vacuum_first_run:
+    name: Daily Vacuum First Run
+    initial: off
+  disable_daily_vacuum:
+    name: Disable Daily Vacuum Automation
+    initial: off
+
+
+###############################################################################
+#                               Automations
+###############################################################################
+automation:
+  - alias: Start Daily Vacuum
+    trigger:
+    - platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+      for:
+        minutes: 2
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: input_boolean.daily_vacuum_first_run
+        state: 'off'
+      - condition: time
+        after: '07:00:00'
+        before: '22:00:00'
+      - condition: state
+        entity_id: input_boolean.disable_daily_vacuum
+        state: 'off'
+    action:
+    - delay: '00:00:30'
+    - service: vacuum.turn_on
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.daily_vacuum_first_run
+
+  - alias: Reset Daily Vacuum First Run state at midnight
+    trigger:
+    - platform: time
+      at: '0:00:00'
+    action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.daily_vacuum_first_run
+
+# To add automation for notification reminder to clear dustbin.

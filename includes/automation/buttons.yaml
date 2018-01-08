@@ -53,3 +53,37 @@
   action:
   - service: light.toggle
     entity_id: light.rachel_bedside
+
+############################################################
+#
+# Entryway Button Right - Toggle Entry Light.
+#
+############################################################
+
+- alias: Entryway Button Right - Toggle Entry Light
+  trigger:
+  - platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.wall_switch_right_158d000170ef78
+      click_type: single
+  action:
+  - service: light.toggle
+    entity_id: light.entry
+
+############################################################
+#
+# Entryway Button Left - Toggle Entryway Light.
+#
+############################################################
+
+- alias: Entryway Button Left - Toggle Entryway Light
+  trigger:
+  - platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.wall_switch_left_158d000170ef78
+      click_type: single
+  action:
+  - service: light.toggle
+    entity_id: light.entryway

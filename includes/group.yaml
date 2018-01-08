@@ -29,6 +29,7 @@ doors_view:
     - group.security
     - group.doorandwindowsensors
     - group.airconditioner
+    - group.robot_vacuum
 lights_view:
   view: yes
   icon: mdi:lightbulb
@@ -134,7 +135,7 @@ cameras:
   name: Cameras
   entities:
     - camera.front_door
-    - camera.back_deck
+    - camera.back_door
 lights:
   name: Lights
   entities:
