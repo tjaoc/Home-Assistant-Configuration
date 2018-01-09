@@ -8,6 +8,7 @@
 * [CyberPower CP1300EPFCLCD UPS](https://www.cyberpower.com/vn/en/product/sku/CP1300EPFCLCD)
 * [Reolink RLC-422-P IP Camera](http://amzn.to/2n0rHgs) x2
 * [Lenovo Tab 4, 8" Android Tablet](http://amzn.to/2vTO7V8) - Used with [HADashboard](https://play.google.com/store/apps/details?id=de.ozerov.fully) and [MQTT Alarm Control Panel](https://play.google.com/store/apps/details?id=com.thanksmister.iot.mqtt.alarmpanel)
+* [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white) - Robot Vacuum Cleaner
 * [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor)
 * [Fibaro Relay Switch](https://www.fibaro.com/en/products/switches-2) - Light Switch Control
 * BroadLink SP Mini 3 x4 - Power Socket Control
@@ -34,6 +35,7 @@
 * Temperature notification from [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor) if no one is home and the home temperature is above 23°C at 5PM. - Option to start the Air Conditioner.
 * AC Split System control via [Harmony Hub](http://amzn.to/2n0jhG3).
 * Living Room TV Activity control via [Harmony Hub](http://amzn.to/2n0jhG3).
+* Daily Automatic Cleaning when nobody is home via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white)
 * Change Home Assistant to a dark theme at sunset and back to the light theme at sunrise.
 * Hide Media Players from the Home Assistant Default View when not being used.
 * IFTTT control of the Office [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
