@@ -68,4 +68,45 @@ automation:
     - service: homeassistant.turn_off
       entity_id: input_boolean.daily_vacuum_first_run
 
-# To add automation for notification reminder to clear dustbin.
+  - alias: Send alert after daily vacuum to empty the dustbin
+    trigger:
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+      for:
+        minutes: 2
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: input_boolean.daily_vacuum_first_run
+        state: 'on'
+      - condition: time
+        after: '08:30:00'
+        before: '22:30:00'
+      - condition: template
+        value_template: >
+          {% if states.automation.send_alert_after_daily_vacuum_to_empty_the_dustbin.last_triggered is not none %}
+            {% if as_timestamp(now()) | int   -  as_timestamp(states.automation.send_alert_after_daily_vacuum_to_empty_the_dustbin.attributes.last_triggered) | int > 1800 %} true {% else %} false
+            {% endif %}
+          {% else %}
+          false
+          {% endif %}
+    action:
+      - service: script.speech_processing
+        data_template:
+          speech_message: >
+           {% if (is_state('device_tracker.hauser_trent', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
+             Attention!: the vacuum dustbin needs to be cleared.
+           {% endif %}
+      - service_template: >
+          {% if (is_state('device_tracker.hauser_trent', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
+            notify.trent_and_rachel
+          {% elif is_state('device_tracker.hauser_trent', 'home') %}
+            notify.trent
+          {% elif is_state('device_tracker.rachels_iphone', 'home') %}
+            notify.rachel
+          {% endif %}
+        data:
+          message: 'Hey, the vacuum dustbin needs to be cleared'
+          title: 'Vacuum Dustbin'

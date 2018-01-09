@@ -186,7 +186,7 @@
     to: 'off'
   action:
   - service: group.set_visibility
-    entity_id: group.media_bed_room
+    entity_id: group.media_bedroom_speaker
     data:
       visible: False
 # Show Media Player
@@ -202,7 +202,7 @@
     to: 'paused'
   action:
   - service: group.set_visibility
-    entity_id: group.media_bed_room
+    entity_id: group.media_bedroom_speaker
     data:
       visible: True
 ############################################################

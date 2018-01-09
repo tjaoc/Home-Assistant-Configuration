@@ -101,6 +101,11 @@ input_select:
      - Even Weeks
      - Odd Weeks
     icon: mdi:recycle
+input_boolean:
+  trash_reminders:
+    name: Trash Reminders
+    initial: on
+    icon: mdi:delete-variant
 
 ###############################################################################
 #  Sensor Definitions
@@ -345,22 +350,11 @@ automation:
               title: Done
             - action: TRASH_REMIND_LATER
               title: Remind Later
-
-#      - service: script.notify_me
-#        data_template:
-#          message: >
-#            {% if states.sensor.trash_day.state == "yes" %}
-#              Tomorrow is the Trash Pickup day.
-#            Put the Trash bin outside, please!
-#            {% elif states.sensor.recycle_day.state == "yes" %}
-#              Tomorrow is the Recycle Pickup day.
-#              Put the Recycle bin outside, please!
-#            {% endif %}
       - service: script.speech_processing
         data_template:
           speech_message: >
             {% if is_state("sensor.trash_day", "yes") and is_state("sensor.recycle_day", "yes") %}
-              Attention!: Tomorrow is the Recycle Pickup day.
+              Attention!: Tomorrow is the Trash and Recycle Pickup day.
               Please don't forget to put the trash and recycle bin outside tonight!
             {% elif states.sensor.trash_day.state == "yes" %}
               Please don't forget to put the Trash bin outside tonight!
