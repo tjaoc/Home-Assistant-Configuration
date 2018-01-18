@@ -67,9 +67,9 @@ http:
 panel_iframe:
 # Hass Configurator Panel
   configurator:
-    title: Configurator
+    title: IDE
     icon: mdi:wrench
-    url: !secret hassconfig_url
+    url: !secret ide_url
   terminal:
     title: Terminal
     icon: mdi:console-line
@@ -108,7 +108,7 @@ sun:
 
 # Text to speech
 tts:
-#- platform: google
+
 - platform: amazon_polly
   aws_access_key_id: !secret aws_access_key_ID
   aws_secret_access_key: !secret aws_secret_access_key

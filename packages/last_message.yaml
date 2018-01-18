@@ -17,7 +17,7 @@ input_boolean:
 #-------------------------------------------
 sensor:
   - platform: mqtt
-    state_topic: "polly/lastmsg"
+    state_topic: "broadcast/lastmsg"
     name: "Last Message"
 ##############################################################################
 ###  Automations -
@@ -32,17 +32,9 @@ automation:
         to: 'on'
 
     action:
-      - service: tts.amazon_polly_say
-        entity_id:
-          - media_player.living_room_home
-          - media_player.bedroom_speaker
+      - service: notify.google_assistant_broadcast
         data_template:
-          message: >
-            <speak>
-            {{states.sensor.last_message.state}}
-            </speak>
-          cache: true
-
+          message: '{{states.sensor.last_message.state}}'
       - service: input_boolean.turn_off
         entity_id:
           - input_boolean.lastmsg

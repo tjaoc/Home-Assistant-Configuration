@@ -50,6 +50,7 @@ info_view:
     - group.multisensor
     - group.trash_schedule
     - group.recycle_schedule
+    - group.projector_room_remote
     - group.speech_functions
     # Groups
 weather:
@@ -167,6 +168,7 @@ network:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.nzbget_speed
+    - switch.nzbget_switch
     - sensor.uptime
     - sensor.livingroomgooglehome
     - sensor.livingroomtv
@@ -249,3 +251,14 @@ doorandwindowsensors:
     - binary_sensor.door_window_sensor_158d0001e037dc
     - binary_sensor.door_window_sensor_158d00019fbe38
     - binary_sensor.door_window_sensor_158d0001a4a872
+projector_room_remote:
+  name: Projector Room Remote
+  entities:
+    - switch.projector_power
+    - switch.reciever_power
+    - switch.reciever_volume__2
+    - switch.reciever_volume_
+    - switch.reciever_hdmi_1
+    - switch.reciever_hdmi_2
+    - switch.reciever_hdmi_3
+    - switch.reciever_hdmi_4

@@ -41,6 +41,8 @@ automation:
       to: 'not_home'
       for:
         minutes: 2
+    - platform: time
+      at: '7:02:00'
     condition:
       condition: and
       conditions:
@@ -50,6 +52,9 @@ automation:
       - condition: time
         after: '07:00:00'
         before: '22:00:00'
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
       - condition: state
         entity_id: input_boolean.disable_daily_vacuum
         state: 'off'

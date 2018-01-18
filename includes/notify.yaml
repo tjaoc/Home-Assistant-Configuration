@@ -20,3 +20,11 @@
   platform: group
   services:
     - service: ios_rachels_iphone
+
+# HASS IO Addon - Google Assistant API
+- name: google_assistant_broadcast
+  platform: rest
+  resource: !secret ga_api_broadcast_message
+- name: google_assistant_command
+  platform: rest
+  resource: !secret ga_api_command
