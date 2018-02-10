@@ -27,7 +27,7 @@
 * [Plex Media Server](https://plex.tv) - Media Streaming
 
 # Automations
-* Voice Notifications on Google Home's via Amazon Polly TTS component.
+* Voice Notifications on Google Home's via [Google Assistant Webserver](https://community.home-assistant.io/t/community-hass-io-add-on-google-assistant-webserver-broadcast-messages-without-interrupting-music/37274) on Hassio
 * Stream radio stations onto Chromecasts and control their volume.
 * On motion from [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor) turn on lights.
 * Burgular Alarm from Xiaomi Gateway when alarm panel is Armed and triggered.
