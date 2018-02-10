@@ -1,0 +1,36 @@
+trent_presence:
+    widget_type: device_tracker
+    title: Trent
+    device: hauser_trent
+    icon_on: mdi-human-male
+    icon_off: mdi-human-male
+
+rachel_presence:
+    widget_type: device_tracker
+    title: Rachel
+    device: rachels_iphone
+    icon_on: mdi-human-female
+    icon_off: mdi-human-female
+
+livingroom_motion:
+    widget_type: binary_sensor
+    title: Living Room Motion
+    entity: binary_sensor.motion
+    icon_on: mdi-run
+    icon_off: mdi-walk
+    
+hallway_motion:
+    widget_type: binary_sensor
+    title: Hallway Motion
+    entity: binary_sensor.motion_sensor_158d000165627b
+    icon_on: mdi-run
+    icon_off: mdi-walk
+    
+alarm:
+    widget_type: alarm
+    entity: alarm_control_panel.ha_alarm
+    title: Alarm
+    
+layout: 
+    - trent_presence(2x1), livingroom_motion(1x1), alarm(2x1), hallway_motion(1x1), rachel_presence(2x1)
+#, load_weather_panel(2x1),load_controls(2x1),load_floorplan(2x1)

@@ -1,0 +1,22 @@
+#
+# Main arguments, all optional
+#
+title: Floorplan
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 8
+#
+# Layout
+layout:
+    - spacer, hafloorplan_frame(6x4), spacer
+    - 
+    -
+    -
+    - include: bottom_panel
+
+hafloorplan_frame:
+    widget_type: iframe
+    title: Floorplan
+#    refresh: 60
+    url_list:
+      - https://ha.stanvx.myds.me/floorplan
