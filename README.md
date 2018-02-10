@@ -43,7 +43,7 @@
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) forwarding to ensure Home Assistant doesn't lose sync whilst using it.
 * Turn on Entryway light for 10 minutes once I get home.
 * Weather notification at sunrise and sunset.
-* Trash and Recycle Bin night reminders - Thanks [CCOSTAN]!(https://github.com/CCOSTAN/Home-AssistantConfig)
+* Trash and Recycle Bin night reminders - Thanks [CCOSTAN](https://github.com/CCOSTAN/Home-AssistantConfig)!
 * UPS status notification (On Battery / Low Battery / On Line)
 
 # Screenshots
@@ -56,3 +56,7 @@
 ![Night](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HANIGHT.PNG)
 #### HA Floorplan
 ![HA Floorplan](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HAFLOORPLAN.PNG)
+#### HA Dashboard
+![Home](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardHome.jpeg)
+![Security](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardSecurity.jpeg)
+![Weather](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardWeather.jpeg)
