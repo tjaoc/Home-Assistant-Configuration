@@ -15,6 +15,9 @@ home-assistant.log
 home-assistant_v2.db
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
+.HA_VERSION
+.spotify-token-cache
+.uuid
 gitupdate.sh
 *.db-journal
 config
@@ -28,7 +31,6 @@ plex.conf
 phue.conf
 harmony_media_room.conf
 pyozw.sqlite
-.*
 !/.gitignore
 hadaemon
 __pycache__/

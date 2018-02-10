@@ -58,6 +58,7 @@ weather:
   entities:
 #    - sensor.weather_summary
     - sun.sun
+    - weather.dark_sky
     - sensor.weather_summary
     - sensor.weather_temperature
     - sensor.weather_minimum
