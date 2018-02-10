@@ -1,4 +1,4 @@
-# Home-Assistant-Configuration
+# [![Build Status](https://travis-ci.org/stanvx/Home-Assistant-Configuration.svg?branch=master)](https://travis-ci.org/stanvx/Home-Assistant-Configuration) Home-Assistant-Configuration
 [Home Assistant](https://home-assistant.io/) configuration files (YAMLs). These are my Home Assistant configuration files.
 
 # Devices
