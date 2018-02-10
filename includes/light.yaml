@@ -49,10 +49,10 @@
 ############
 - platform: yeelight
   devices:
-    192.168.1.85:
+    !secret study_desk_lamp_light_ip:
       name: Study Desk Lamp
       transition: 1000
-    192.168.1.58:
+    !secret trent_bedside_light_ip:
       name: Trent Bedside
-    192.168.1.50:
+    !secret rachel_bedside_light_ip:
       name: Rachel Bedside

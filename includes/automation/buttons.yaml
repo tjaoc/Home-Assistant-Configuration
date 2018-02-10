@@ -1,6 +1,6 @@
 ############################################################
 #
-# Automation ifttt
+# Automation Buttons
 #
 ############################################################
 
@@ -16,7 +16,7 @@
     event_type: click
     event_data:
       entity_id: binary_sensor.switch_158d0001a21086
-      click_type: both
+      click_type: single
   action:
   - service: light.toggle
     entity_id: light.trent_bedside
@@ -49,7 +49,7 @@
     event_type: click
     event_data:
       entity_id: binary_sensor.switch_158d000186e632
-      click_type: both
+      click_type: single
   action:
   - service: light.toggle
     entity_id: light.rachel_bedside

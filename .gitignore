@@ -30,4 +30,4 @@ pyozw.sqlite
 .*
 !/.gitignore
 hadaemon
-custom_components
+__pycache__/

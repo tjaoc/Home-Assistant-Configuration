@@ -67,7 +67,7 @@
       entity_id: input_select.washing_machine_status
       to: Finishing
       for:
-        minutes: 2
+        minutes: 1
   condition:
     condition: and
     conditions:
@@ -83,8 +83,8 @@
 # When we open the washing machine door, reset the status back to
 # idle, so we don't spam people that the washing machine has
 # finished, and someone has already emptied it
-# This is a temporary solution until door sensor arrives
-- alias: Set washing machine dirty with single click of laundry button
+
+- alias: Set washing machine dirty when door opens
   trigger:
     - platform: state
       entity_id: binary_sensor.door_window_sensor_158d00019f886a

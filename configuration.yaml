@@ -202,7 +202,7 @@ remote:
     host: !secret harmony_ip
 xiaomi_aqara:
   gateways:
-   - mac:
+   - mac: !secret xiaomimac
      key: !secret xiaomikey
 
 ############
