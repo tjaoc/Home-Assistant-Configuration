@@ -1,4 +1,5 @@
 """
+*** CURRENTLY WORK IN PROGRESS ***
 Support for setting the NZBGet NZB client in pause.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.nzbget/
@@ -91,11 +92,9 @@ class NZBGetSwitch(ToggleEntity):
         self.api.pausedownload()
 
     def update(self):
-        """Get the latest data from deluge and updates the state."""
+        """Get the latest data from NZBGet and updates the state."""
         active = self.api.status.get("DownloadPaused")
         self._state = STATE_OFF if active else STATE_ON
-
-""" Works but doesn't update often enough """
 
 class NZBGetAPI(object):
     """Simple JSON-RPC wrapper for NZBGet's API."""
