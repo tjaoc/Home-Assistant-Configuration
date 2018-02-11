@@ -1,4 +1,4 @@
-# [![Build Status](https://travis-ci.org/stanvx/Home-Assistant-Configuration.svg?branch=master)](https://travis-ci.org/stanvx/Home-Assistant-Configuration) Home-Assistant-Configuration
+# Home-Assistant-Configuration [![Build Status](https://travis-ci.org/stanvx/Home-Assistant-Configuration.svg?branch=master)](https://travis-ci.org/stanvx/Home-Assistant-Configuration)
 [Home Assistant](https://home-assistant.io/) configuration files (YAMLs). These are my Home Assistant configuration files.
 
 # Devices
@@ -11,12 +11,20 @@
 * [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white) - Robot Vacuum Cleaner
 * [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor)
 * [Fibaro Relay Switch](https://www.fibaro.com/en/products/switches-2) - Light Switch Control
+* [Xiaomi Multifunctional Gateway](https://www.gearbest.com/living-appliances/pp_344667.html) - Gateway used for Xiaomi home automation devices.
+* [Xiaomi Window Door Sensors](https://www.gearbest.com/smart-light-bulb/pp_257677.html)
+* [Xiaomi Motion Sensors](https://www.gearbest.com/smart-light-bulb/pp_257678.html)
+* [Xiaomi Wall Plug](https://www.gearbest.com/living-appliances/pp_344666.html)
+* [Xiaomi Wireless Buttons](https://www.gearbest.com/smart-light-bulb/pp_257679.html)
+* [Xiaomi Wireless Wall Switch](https://www.gearbest.com/alarm-systems/pp_610095.html)
+* [Xiaomi Temperature and Humidity Sensor](https://www.gearbest.com/living-appliances/pp_344665.html)
+* [Xiaomi Yeelight RGBW E27](https://www.gearbest.com/smart-lighting/pp_361555.html) - Bedside Lamps
+* [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
 * BroadLink SP Mini 3 x4 - Power Socket Control
+* [BroadLink RM Mini 3](https://www.gearbest.com/living-appliances/pp_357329.html) - Projector Room Control
 * [Milight WiFi Gateway Emulator](https://github.com/sidoh/esp8266_milight_hub) (NodeMCU ESP8266 / NRF24L01+ module) - Allows for controlling an unlimited amount of LimitlessLED Light groups via MQTT Protocol
 * [LimitlessLED Full Color and Dual White Downlight](http://www.limitlessled.com/shop/mr16-rgbw-ww-cw-color-and-white-led) - Smart Dimmable Full Color Downlights
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) - Smart Light Remote Control [HASS Integrated](https://github.com/sidoh/esp8266_milight_hub/wiki/Using-Milight-Remote-with-HomeAssistant)
-* [Xiaomi Yeelight RGBW E27](https://www.gearbest.com/smart-lighting/pp_361555.html) - Bedside Lamps
-* [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
 * [Google Home](https://store.google.com/product/google_home) - Voice Assistant/Control
 * [Google Home Mini](https://store.google.com/product/google_home_mini) - Voice Assistant/Control
 * [Google Chromecast 1](https://www.google.com.au/chromecast/tv/chromecast)
@@ -44,6 +52,7 @@
 * Turn on Entryway light for 10 minutes once I get home.
 * Weather notification at sunrise and sunset.
 * Trash and Recycle Bin night reminders - Thanks [CCOSTAN](https://github.com/CCOSTAN/Home-AssistantConfig)!
+* Washing Machine monitoring and reminders - Thanks [philhawthorne](https://philhawthorne.com/making-dumb-dishwashers-and-washing-machines-smart-alerts-when-the-dishes-and-clothes-are-cleaned/)!
 * UPS status notification (On Battery / Low Battery / On Line)
 
 # Screenshots
@@ -60,3 +69,9 @@
 ![Home](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardHome.jpeg)
 ![Security](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardSecurity.jpeg)
 ![Weather](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardWeather.jpeg)
+
+Configuration files are being edited with Cloud9 IDE [Hass.io Add-on](https://github.com/hassio-addons/addon-ide).
+
+Configuration files are tested against the most stable version of home-assistant using [Travis](https://travis-ci.org/stanvx/Home-Assistant-Configuration).
+
+Message me via the HomeAssistant forums if you have any questions or recommendations in regards to my repository! https://community.home-assistant.io/u/stanvx
