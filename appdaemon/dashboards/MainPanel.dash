@@ -12,11 +12,11 @@ global_parameters:
     use_hass_icon: 1
 # Layout
 layout:
-    - clock(2x1),                                       current_temperature, current_humidity,    livingroom_temperature, livingroom_lux, good_night_script(2x1)
-    - entry_light,          entryway_light,             living_room_light,   projector_room_light
+    - clock(2x1),                                       current_temperature, current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
+    - entry_light,          entryway_light,             living_room_light,   projector_room_light, good_night_script(2x1)
     - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch
     - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   hallway_motion(2x1)
-    - include: bottom_panel
+    - include: bottom_panel_main
 
 clock:
     widget_type: clock
@@ -68,7 +68,21 @@ livingroom_lux:
     precision: 0
     shorten: 1
     entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-   
+
+bedroom_temperature:
+    widget_type: sensor
+    title: Bedroom Temperature
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d0001a2e878
+
+bedroom_humidity:
+    widget_type: sensor
+    title: Bedroom Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.humidity_158d0001a2e878
+
 livingroom_motion:
     widget_type: binary_sensor
     title: Living Room Motion

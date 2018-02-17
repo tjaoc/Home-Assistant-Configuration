@@ -101,13 +101,13 @@ automation:
       - service: script.speech_processing
         data_template:
           speech_message: >
-           {% if (is_state('device_tracker.hauser_trent', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
+           {% if (is_state('device_tracker.trents_galaxy', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
              Attention!: the vacuum dustbin needs to be cleared.
            {% endif %}
       - service_template: >
-          {% if (is_state('device_tracker.hauser_trent', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
+          {% if (is_state('device_tracker.trents_galaxy', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
             notify.trent_and_rachel
-          {% elif is_state('device_tracker.hauser_trent', 'home') %}
+          {% elif is_state('device_tracker.trents_galaxy', 'home') %}
             notify.trent
           {% elif is_state('device_tracker.rachels_iphone', 'home') %}
             notify.rachel

@@ -32,7 +32,7 @@
 - alias: Entry Light Trent Arrives Home
   trigger:
   - platform: state
-    entity_id: device_tracker.hauser_trent
+    entity_id: device_tracker.trents_galaxy
     to: home
   - platform: state
     entity_id: device_tracker.rachels_iphone
@@ -43,6 +43,9 @@
     - condition: sun
       after: sunset
       after_offset: -0:30:00
+    - condition: state
+      entity_id: light.entry
+      state: 'off'
     - condition: state
       entity_id: input_boolean.disable_entry_light_trent_home
       state: 'off'
@@ -71,6 +74,9 @@
     - condition: sun
       after: sunset
       after_offset: -0:30:00
+    - condition: state
+      entity_id: light.entryway
+      state: 'off'
     - condition: state
       entity_id: input_boolean.disable_entryway_light_frontdoor
       state: 'off'

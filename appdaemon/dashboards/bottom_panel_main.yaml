@@ -1,0 +1,38 @@
+load_main_panel:
+    widget_type: navigate
+    title: Main Panel
+    icon_inactive: fa-home
+    icon_inactive_style: "color: $blue"
+    dashboard: MainPanel
+
+load_security_panel:
+    widget_type: navigate
+    title: Security Panel
+    icon_inactive: fa-shield
+    dashboard: SecurityPanel
+
+load_weather_panel:
+    widget_type: navigate
+    title: Weather
+    icon_inactive: fa-cloud
+    dashboard: WeatherPanel
+
+load_controls:
+    widget_type: navigate
+    title: Controls
+    icon_inactive: fa-dashboard
+    dashboard: Controls
+
+load_floorplan:
+    widget_type: navigate
+    title: Floorplan
+    icon_inactive: fa-map-marker
+    dashboard: Floorplan
+    
+reload:
+    widget_type: reload
+    title: Reload
+    
+layout: 
+    - load_main_panel(2x1), load_security_panel(2x1), load_weather_panel(2x1), load_floorplan(1x1), reload
+#, load_weather_panel(2x1),load_controls(2x1),load_floorplan(2x1)

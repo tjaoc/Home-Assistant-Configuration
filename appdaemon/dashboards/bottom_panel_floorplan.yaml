@@ -26,6 +26,7 @@ load_floorplan:
     widget_type: navigate
     title: Floorplan
     icon_inactive: fa-map-marker
+    icon_inactive_style: "color: $blue"
     dashboard: Floorplan
     
 reload:

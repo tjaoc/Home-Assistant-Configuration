@@ -116,7 +116,7 @@ airconditioner:
 family:
   name: Family
   entities:
-    - device_tracker.hauser_trent
+    - device_tracker.trents_galaxy
     - device_tracker.rachels_iphone
 scripts:
   name: Scripts

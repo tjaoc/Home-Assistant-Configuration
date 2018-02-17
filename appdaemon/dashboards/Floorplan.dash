@@ -12,7 +12,7 @@ layout:
     - 
     -
     -
-    - include: bottom_panel
+    - include: bottom_panel_floorplan
 
 hafloorplan_frame:
     widget_type: iframe

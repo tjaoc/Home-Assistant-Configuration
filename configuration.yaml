@@ -184,9 +184,11 @@ alarm_control_panel:
 
 #   Owntracks
 device_tracker:
-#   Owntracks
-  - platform: owntracks
-#   Router Based Device Tracking
+# MQTT / Zanzito based device tracking
+  - platform: mqtt_json
+    devices:
+      trents_galaxy: zanzito/trent/location
+# NMAP Based Device Tracking
   - platform: nmap_tracker
     hosts: 192.168.1.1/24
     exclude:

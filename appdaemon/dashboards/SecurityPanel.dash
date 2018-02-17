@@ -25,4 +25,4 @@ layout:
     -
     -
     - include: security_panel
-    - include: bottom_panel
+    - include: bottom_panel_security

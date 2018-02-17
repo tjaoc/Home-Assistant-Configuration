@@ -16,7 +16,7 @@ layout:
     - sensor.weather_temperature(2x1), sensor.weather_pressure(2x1)
     - sensor.weather_wind_speed(2x1), sensor.weather_wind_bearing, sensor.weather_humidity
     - spacer(4x1), sensor.weather_visibility, sensor.weather_precip_probability, sensor.weather_precip_intensity(2x1)
-    - include: bottom_panel
+    - include: bottom_panel_weather
 
 weather_frame:
     widget_type: iframe

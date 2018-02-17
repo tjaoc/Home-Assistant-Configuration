@@ -29,7 +29,7 @@
   name: 'Trent Home'
   probability_threshold: 0.95
   observations:
-    - entity_id: 'device_tracker.hauser_trent'
+    - entity_id: 'device_tracker.trents_galaxy'
       prob_given_true: 1
       platform: 'state'
       to_state: 'home'
