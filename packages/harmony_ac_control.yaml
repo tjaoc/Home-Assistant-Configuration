@@ -16,6 +16,23 @@ group:
       - input_number.ac_target_temp
       - sensor.ac_target
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+  ac_scheduler:
+    name: AC Scheduler
+    entities:
+      - input_boolean.ac_on_schedule_active
+      - input_text.ac_on_schedule
+      - input_boolean.ac_off_schedule_active
+      - input_text.ac_off_schedule
+
+input_boolean:
+  ac_on_schedule_active:
+    name: Activate AC On schedule
+    initial: off
+    icon: mdi:calendar
+  ac_off_schedule_active:
+    name: Activate AC Off schedule
+    initial: off
+    icon: mdi:calendar
 
 input_number:
   ac_target_temp:
@@ -25,6 +42,16 @@ input_number:
     step: 1
     initial: 21
     mode: slider
+
+input_text:
+  ac_on_schedule:
+    name: AC on schedule
+    initial: '17:00'
+    pattern: '^[0-9]{1,2}:[0-9]{1,2}$'
+  ac_off_schedule:
+    name: AC off schedule
+    initial: '23:30'
+    pattern: '^[0-9]{1,2}:[0-9]{1,2}$'
 
 input_select:
   ac_operation_mode:
@@ -122,3 +149,49 @@ automation:
       data_template:
         device: "44392204"
         command: "PowerOff"  
+
+  - alias: Turn On AC on schedule
+    trigger:
+    - platform: time
+      minutes: /1
+      seconds: 0
+    condition:
+    - condition: state
+      entity_id: input_boolean.ac_on_schedule_active
+      state: 'on'
+    - condition: template
+      value_template: '{{ now().strftime("%H:%M") == states.input_text.ac_on_schedule.state
+        }}'
+    action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ac_operation_mode
+        option: Cool
+    - service: input_boolean.turn_off
+      entity_id:
+      - input_boolean.ac_on_schedule_active
+
+  - alias: Turn Off AC on schedule
+    trigger:
+    - platform: time
+      minutes: /1
+      seconds: 0
+    condition:
+    - condition: state
+      entity_id: input_boolean.ac_off_schedule_active
+      state: 'on'
+    - condition: template
+      value_template: '{{ now().strftime("%H:%M") == states.input_text.ac_off_schedule.state
+        }}'
+    action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ac_operation_mode
+        option: Power Off
+    - service: input_boolean.turn_off
+      entity_id:
+      - input_boolean.ac_off_schedule_active
+
+
+
+

@@ -29,6 +29,7 @@ doors_view:
     - group.security
     - group.doorandwindowsensors
     - group.airconditioner
+    - group.ac_scheduler
     - group.robot_vacuum
 lights_view:
   view: yes
