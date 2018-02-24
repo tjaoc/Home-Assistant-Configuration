@@ -101,6 +101,7 @@ family:
     - device_tracker.rachels_iphone
 scripts:
   name: Scripts
+  control: hidden
   entities:
     - script.good_night
     - script.start_air_conditioner
@@ -179,6 +180,7 @@ ups:
     - sensor.ups_battery_charge
 automation_override:
   name: Automation Override
+  control: hidden
   entities:
     - input_boolean.guest_mode
     - input_boolean.alert_mode
@@ -197,6 +199,7 @@ automation_override:
     - input_boolean.disable_entryway_light_frontdoor
 speech_functions:
   name: Speech Functions
+  control: hidden
   entities:
     - input_boolean.lastmsg
     - switch.air_conditioner
@@ -230,6 +233,7 @@ doorandwindowsensors:
     - binary_sensor.door_window_sensor_158d0001a4a872
 projector_room_remote:
   name: Projector Room Remote
+  control: hidden
   entities:
     - switch.projector_power
     - switch.reciever_power

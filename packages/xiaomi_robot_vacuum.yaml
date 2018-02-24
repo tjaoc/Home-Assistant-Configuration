@@ -13,6 +13,7 @@ homeassistant:
 
 group:
   Robot Vacuum:
+    control: hidden
     entities:
       - vacuum.xiaomi_vacuum_cleaner
       - input_boolean.disable_daily_vacuum

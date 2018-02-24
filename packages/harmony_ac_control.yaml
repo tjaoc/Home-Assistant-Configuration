@@ -18,6 +18,7 @@ group:
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
   ac_scheduler:
     name: AC Scheduler
+    control: hidden
     entities:
       - input_boolean.ac_on_schedule_active
       - input_text.ac_on_schedule
@@ -191,7 +192,3 @@ automation:
     - service: input_boolean.turn_off
       entity_id:
       - input_boolean.ac_off_schedule_active
-
-
-
-
