@@ -57,7 +57,7 @@
       ringtone_vol: 100
   - service: light.turn_on
     entity_id: group.all_lights
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data:
       message: "Police Siren has been triggered at home"
       data:

@@ -114,7 +114,7 @@
         entity_id: device_tracker.trent_trent
         state: '!secret work_state'
   action:
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data_template:
       message: "Unexpected Motion in Living Room Detected!"
 
@@ -134,6 +134,6 @@
     entity_id: input_boolean.disable_device_tampering_notification
     state: 'off'
   action:
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data_template:
       message: "Tampering of Living Room Sensor Detected!"

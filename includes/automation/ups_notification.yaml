@@ -10,7 +10,7 @@
     entity_id: sensor.ups_status_data
     to: 'OB DISCHRG'
   action:
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data:
       message: "Power Alert! The UPS has switched to Battery Power."  
       
@@ -20,7 +20,7 @@
     entity_id: sensor.ups_status_data
     to: 'LB'
   action:
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data:
       message: "Power Alert! The UPS has got Low Power."  
 
@@ -30,6 +30,6 @@
     entity_id: sensor.ups_status_data
     to: 'OL CHRG'
   action:
-  - service: notify.html5_trent_galaxys8
+  - service: notify.trent
     data:
       message: "Power Alert! The UPS is back On line."  

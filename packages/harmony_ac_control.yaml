@@ -1,0 +1,124 @@
+###############################################################################
+#   @author         :   Trent Stanton
+#   @date           :   24/02/2018
+#   @package        :   Harmony Air Conditioner Control
+#   @description    :   Control of AC Split System using Harmony Hub
+#   @url            :   https://community.home-assistant.io/t/ac-split-system-integration-via-harmony-remote/21248
+###############################################################################
+
+group:
+  airconditioner:
+    name: AC Split System
+    entities:
+      - input_select.ac_operation_mode
+      - input_select.ac_fan_mode
+      - input_select.ac_swing_mode
+      - input_number.ac_target_temp
+      - sensor.ac_target
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+
+input_number:
+  ac_target_temp:
+    name: Set Target Temp
+    min: 18
+    max: 22
+    step: 1
+    initial: 21
+    mode: slider
+
+input_select:
+  ac_operation_mode:
+    name: Operating Mode
+    options:
+      - COOL
+      - FAN
+      - Power Off
+    initial: Power Off
+    icon: mdi:settings
+  ac_fan_mode:
+    name: Fan Mode
+    options:
+      - AUTO
+      - LOW
+      - MED
+      - HIGH
+    initial: AUTO
+    icon: mdi:fan
+  ac_swing_mode:
+    name: Swing Mode
+    options:
+     - TOP
+     - SWING
+    icon: mdi:arrow-expand
+
+sensor:
+  - platform: template
+    sensors:
+      ac_setting_cool:
+        friendly_name: 'Current AC Cool Setting'
+        value_template: '{{ states.input_number.ac_target_temp.state | int }}-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
+      ac_setting_fan:
+        friendly_name: 'Current AC Fan Setting'
+        value_template: 'FAN-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
+      ac_target:
+        friendly_name: 'Target Temperature'
+        value_template: '{{ states.input_number.ac_target_temp.state | int }}'
+        unit_of_measurement: '°C'
+###############################################################################
+#                               Automations
+###############################################################################
+automation:
+  - alias: AC Start Cool
+    hide_entity: True
+    trigger:
+    - platform: state
+      entity_id: input_select.ac_operation_mode
+    - platform: state
+      entity_id: input_select.ac_fan_mode
+    - platform: state
+      entity_id: input_select.ac_swing_mode
+    - platform: state
+      entity_id: input_number.ac_target_temp
+    condition:
+    - condition: state
+      entity_id: input_select.ac_operation_mode
+      state: 'COOL'
+    action:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data_template:
+        device: "44392204"
+        command: "{{ states.sensor.ac_setting_cool.state }}"
+
+  - alias: AC Start Fan
+    hide_entity: True
+    trigger:
+    - platform: state
+      entity_id: input_select.ac_operation_mode
+    - platform: state
+      entity_id: input_select.ac_fan_mode
+    - platform: state
+      entity_id: input_select.ac_swing_mode
+    condition:
+    - condition: state
+      entity_id: input_select.ac_operation_mode
+      state: 'FAN'
+    action:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data_template:
+        device: "44392204"
+        command: "{{ states.sensor.ac_setting_fan.state }}"
+
+  - alias: AC Stop
+    hide_entity: True
+    trigger:
+    - platform: state
+      entity_id: input_select.ac_operation_mode
+      to: 'Power Off'
+    action:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data_template:
+        device: "44392204"
+        command: "PowerOff"  

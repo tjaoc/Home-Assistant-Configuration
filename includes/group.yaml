@@ -17,7 +17,7 @@ default_view:
     - group.media_bedroom_speaker
     - group.media_outside
     - group.media_spotify
-    - group.harmony
+    - group.harmonytv
     - group.radio
     - group.family
     - group.scripts
@@ -93,26 +93,6 @@ media_spotify:
   name: Media Spotify
   entities:
     - media_player.spotify
-harmony:
-  name: Harmony Remote
-  entities:
-    - sensor.harmony_activity
-    - input_select.harmony
-radio:
-  name: Radio
-  entities:
-    - input_select.radio_player
-    - input_select.radio_station
-    - input_number.google_volume
-airconditioner:
-  name: AC Split System
-  entities:
-    - input_select.ac_operation_mode
-    - input_select.ac_fan_mode
-    - input_select.ac_swing_mode
-    - input_number.ac_target_temp
-    - sensor.ac_target
-    - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
 family:
   name: Family
   entities:
@@ -189,12 +169,6 @@ synology:
     - sensor.volume_used_volume_2
     - sensor.maximum_disk_temp_volume_2
     - sensor.status_volume_3
-washing_machine:
-  name: "Washing Machine"
-  entities:
-    - sensor.washing_machine_status
-    - switch.plug_158d0001debe7a
-    - sensor.washing_machine_status
 ups:
   name: "UPS"
   entities:
@@ -217,6 +191,7 @@ automation_override:
     - input_boolean.disable_unexpected_motion_notification
     - input_boolean.disable_device_tampering_notification
     - input_boolean.disable_washing_machine_notification
+    - input_boolean.disable_dustbin_notification
     - input_boolean.disable_entry_light_trent_home
     - input_boolean.disable_entryway_light_frontdoor
 speech_functions:

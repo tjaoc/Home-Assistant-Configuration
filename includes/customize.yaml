@@ -14,8 +14,6 @@ media_player.outside:
   friendly_name: Outside Chromecast Audio
 media_player.bed_room:
   friendly_name: Bed Room Chromecast
-sensor.harmony_activity:
- icon: 'mdi:monitor'
 sensor.weather_minimum:
  icon: 'mdi:thermometer'
 sensor.weather_maximum:

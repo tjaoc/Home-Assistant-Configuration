@@ -77,19 +77,6 @@
 # Device Tracking + Activity Templates
 - platform: template
   sensors:
-    ac_setting_cool:
-      friendly_name: 'Current AC Cool Setting'
-      value_template: '{{ states.input_number.ac_target_temp.state | int }}-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
-    ac_setting_fan:
-      friendly_name: 'Current AC Fan Setting'
-      value_template: 'FAN-{{ states.input_select.ac_fan_mode.state }}-{{ states.input_select.ac_swing_mode.state }}'
-    ac_target:
-      friendly_name: 'Target Temperature'
-      value_template: '{{ states.input_number.ac_target_temp.state | int }}'
-      unit_of_measurement: '°C'
-    harmony_activity:
-      friendly_name: 'Harmony Activity'
-      value_template: '{{ states.remote.living_room.attributes.current_activity }}'
     xboxone:
       friendly_name: 'Xbox One'
       value_template: "{{ 'Online' if is_state('device_tracker.281878ebb599', 'home') else 'Offline' }}"
@@ -143,16 +130,7 @@
     ups_battery_runtime_mins:
       friendly_name: 'UPS Battery Runtime'
       unit_of_measurement: 'minutes'
-      value_template: "{{ states('sensor.ups_battery_runtime')|float / 60 |round(2)}}"
-# Washing Machine Status
-    washing_machine_status:
-      value_template: '{{ states.input_select.washing_machine_status.state}}'
-      friendly_name: 'Washing Machine Status'
-# Washing Machine Power Usage
-    waching_machine_power:
-      entity_id: switch.plug_158d0001debe7a
-      value_template: '{{ state.attributes.load_power }}'
-      friendly_name: 'Washing Machine Power'
+      value_template: "{{ states('sensor.ups_battery_runtime')|float / 60 |round(2)}}" 
 # API Stream Sensor
 - platform: api_streams
 
@@ -206,8 +184,6 @@
   host: !secret sensor_synology_host
   port: 3493
   alias: UPS
-#  username: user
-#  password: pass
   resources:
     - ups.status
     - ups.load
