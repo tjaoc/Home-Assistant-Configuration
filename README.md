@@ -4,10 +4,10 @@
 # Devices
 * [Raspberry Pi 3](http://amzn.to/2nMYhkX) - Hass.io Installed
 * [Aeotec Z-Stick Gen5](http://aeotec.com/z-wave-usb-stick)
-* [Synology DSM1815+ 8 Bay NAS](http://amzn.to/2ooPHdn)
+* [Synology DSM1815+ 8 Bay NAS](https://www.synology.com/en-global/products/DS1817+)
 * [CyberPower CP1300EPFCLCD UPS](https://www.cyberpower.com/vn/en/product/sku/CP1300EPFCLCD)
-* [Reolink RLC-422-P IP Camera](http://amzn.to/2n0rHgs) x2
-* [Lenovo Tab 4, 8" Android Tablet](http://amzn.to/2vTO7V8) - Used with [HADashboard](https://play.google.com/store/apps/details?id=de.ozerov.fully) and [MQTT Alarm Control Panel](https://play.google.com/store/apps/details?id=com.thanksmister.iot.mqtt.alarmpanel)
+* [Reolink RLC-422-P IP Camera](https://reolink.com/product/rlc-422/) x2
+* [Lenovo Tab 4, 8" Android Tablet](https://www3.lenovo.com/au/en/tablets-and-2-in-1s/android-tablets/Lenovo-TB-8504/p/ZZITZTATB08) - Used with [HADashboard](https://play.google.com/store/apps/details?id=de.ozerov.fully) and [MQTT Alarm Control Panel](https://play.google.com/store/apps/details?id=com.thanksmister.iot.mqtt.alarmpanel)
 * [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white) - Robot Vacuum Cleaner
 * [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor)
 * [Fibaro Relay Switch](https://www.fibaro.com/en/products/switches-2) - Light Switch Control
@@ -19,7 +19,7 @@
 * [Xiaomi Wireless Wall Switch](https://www.gearbest.com/alarm-systems/pp_610095.html)
 * [Xiaomi Temperature and Humidity Sensor](https://www.gearbest.com/living-appliances/pp_344665.html)
 * [Xiaomi Yeelight RGBW E27](https://www.gearbest.com/smart-lighting/pp_361555.html) - Bedside Lamps
-* [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
+* [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html) - Desk Lamp
 * BroadLink SP Mini 3 x4 - Power Socket Control
 * [BroadLink RM Mini 3](https://www.gearbest.com/living-appliances/pp_357329.html) - Projector Room Control
 * [Milight WiFi Gateway Emulator](https://github.com/sidoh/esp8266_milight_hub) (NodeMCU ESP8266 / NRF24L01+ module) - Allows for controlling an unlimited amount of LimitlessLED Light groups via MQTT Protocol
@@ -30,7 +30,7 @@
 * [Google Chromecast 1](https://www.google.com.au/chromecast/tv/chromecast)
 * [Google Chromecast 2](https://www.google.com.au/chromecast/tv/chromecast)
 * [Google Chromecast Audio](https://www.google.com.au/intl/en_au/chromecast/audio)
-* [Harmony Hub](http://amzn.to/2n0jhG3) - TV and AC Control
+* [Harmony Hub](https://www.logitech.com/en-us/product/harmony-hub?crid=60) - TV and AC Control
 * [OwnTracks App](http://owntracks.org) - Mobile Device Tracking
 * [Plex Media Server](https://plex.tv) - Media Streaming
 
@@ -46,7 +46,6 @@
 * Daily Automatic Cleaning when nobody is home via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white)
 * Change Home Assistant to a dark theme at sunset and back to the light theme at sunrise.
 * Hide Media Players from the Home Assistant Default View when not being used.
-* IFTTT control of the Office [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html)
 * Media Player light control in Living Room, Dim lights when playing and brighten when paused/stopped.
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) forwarding to ensure Home Assistant doesn't lose sync whilst using it.
 * Turn on Entryway light for 10 minutes once I get home.
