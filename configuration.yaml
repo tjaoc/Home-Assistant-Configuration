@@ -126,10 +126,6 @@ media_player:
     client_id: !secret spotify_client_id
     client_secret: !secret spotify_client_secret
 
-weather:
-  - platform: darksky
-    api_key: !secret darksky_api
-
 # Camera (Synology)
 camera:
   - platform: synology

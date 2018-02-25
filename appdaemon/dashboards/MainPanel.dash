@@ -13,7 +13,7 @@ global_parameters:
 # Layout
 layout:
     - clock(2x1),                                       current_temperature, current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
-    - entry_light,          entryway_light,             living_room_light,   projector_room_light, good_night_script(2x1)
+    - entry_light,          entryway_light,             living_room_light,   projector_room_light, good_night_script(2x1), air_conditioner_switch
     - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch
     - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   hallway_motion(2x1)
     - include: bottom_panel_main
@@ -174,3 +174,10 @@ good_night_script:
     entity: script.good_night
     icon_on: mdi-sleep
     icon_off: mdi-sleep
+
+air_conditioner_switch:
+    widget_type: switch
+    title: Air Conditioner
+    entity: switch.air_conditioner
+    icon_on: mdi-fan
+    icon_off: mdi-fan-off

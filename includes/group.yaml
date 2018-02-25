@@ -21,16 +21,20 @@ default_view:
     - group.radio
     - group.family
     - group.scripts
-doors_view:
+home_view:
   view: yes
   icon: mdi:security-home
+  entities:
+    - group.airconditioner
+    - group.ac_scheduler
+    - group.robot_vacuum
+security_view:
+  view: yes
+  icon: mdi:cctv
   entities:
     - group.cameras
     - group.security
     - group.doorandwindowsensors
-    - group.airconditioner
-    - group.ac_scheduler
-    - group.robot_vacuum
 lights_view:
   view: yes
   icon: mdi:lightbulb
@@ -54,18 +58,6 @@ info_view:
     - group.projector_room_remote
     - group.speech_functions
     # Groups
-weather:
-  name: Weather
-  entities:
-#    - sensor.weather_summary
-    - sun.sun
-    - weather.dark_sky
-    - sensor.weather_summary
-    - sensor.weather_temperature
-    - sensor.weather_minimum
-    - sensor.weather_maximum
-    - sensor.weather_precip_intensity
-    - sensor.weather_humidity
 media_living_room_home:
   name: Media Living Room Home
   entities:

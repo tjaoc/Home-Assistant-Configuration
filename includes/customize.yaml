@@ -32,7 +32,7 @@ sensor.xboxone:
 sensor.ps4:
   icon: 'mdi:playstation'
 sensor.livingroomgooglehome:
-  icon: 'mdi:assistant'
+  icon: 'mdi:google-home'
 sensor.livingroomchromecast:
   icon: 'mdi:cast'
 sensor.bedroomchromecast:

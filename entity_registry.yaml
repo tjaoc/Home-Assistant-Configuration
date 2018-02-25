@@ -40,3 +40,6 @@ media_player.plex_web_chrome:
 media_player.tv_ua55ju6400:
   platform: plex
   unique_id: cpcj6oterj346
+media_player.xboxone:
+  platform: plex
+  unique_id: fkldvefio46i8utno3050qs0

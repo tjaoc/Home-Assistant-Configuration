@@ -4,37 +4,6 @@
 #
 ############################################################
 
-# Dark Sky Weather
-- platform: darksky
-  api_key: !secret darksky_api
-  name: Weather
-  monitored_conditions:
-    - summary
-    - icon
-    - nearest_storm_distance
-    - nearest_storm_bearing
-#    - precip_type
-    - precip_intensity
-    - precip_probability
-    - temperature
-    - apparent_temperature
-#    - dew_point
-    - wind_speed
-    - wind_bearing
-#    - cloud_cover
-    - humidity
-    - pressure
-    - visibility
-#    - ozone
-    - minutely_summary
-    - hourly_summary
-    - daily_summary
-    - temperature_max
-    - temperature_min
-#    - apparent_temperature_max
-#    - apparent_temperature_min
-#    - precip_intensity_max
-
 # Uptime Sensor
 - platform: uptime
 
@@ -131,52 +100,6 @@
       friendly_name: 'UPS Battery Runtime'
       unit_of_measurement: 'minutes'
       value_template: "{{ states('sensor.ups_battery_runtime')|float / 60 |round(2)}}" 
-# API Stream Sensor
-- platform: api_streams
-
-# Scrape sensor for BOM weather forecasts
-- platform: scrape
-  resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
-  name: Weather Maximum
-  select: '.max'
-  unit_of_measurement: '°C Max'
-
-- platform: scrape
-  resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
-  name: Weather Minimum
-  select: '.min'
-  unit_of_measurement: '°C Min'
-
-- platform: scrape
-  resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
-  name: Melbourne summary
-  select: 'p:nth-of-type(4)'
-  # unit_of_measurement: 'Nil'
-
-- platform: scrape
-  resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
-  name: Melbourne UV forecast
-  select: 'p:nth-of-type(5)'
-  # unit_of_measurement: 'Nil'
-
-
-- platform: scrape
-  resource: http://www.bom.gov.au/vic/forecasts/melbourne.shtml
-  name: Melbourne forecast line3
-  select: 'p:nth-of-type(6)'
-  # unit_of_measurement: 'Nil'
-
-- platform: openweathermap
-  api_key: !secret openweathermap_api
-  forecast: 0
-  monitored_conditions:
-    - weather
-    - temperature
-    - wind_speed
-    - humidity
-    - pressure
-    - clouds
-    - rain
 
 # Synology UPS Data
 - platform: nut
