@@ -43,3 +43,9 @@ media_player.tv_ua55ju6400:
 media_player.xboxone:
   platform: plex
   unique_id: fkldvefio46i8utno3050qs0
+media_player.xboxone_2:
+  platform: plex
+  unique_id: jsrn2sbpqes2qjmd1q8uubkp
+media_player.rachels_iphone:
+  platform: plex
+  unique_id: 34081F5E-6594-4C3F-8822-F25FD9610A32

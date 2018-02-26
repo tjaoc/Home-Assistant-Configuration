@@ -202,6 +202,7 @@ remote:
   - platform: harmony
     name: !secret harmony_name
     host: !secret harmony_ip
+    activity: Watch TV
 xiaomi_aqara:
   gateways:
    - mac: !secret xiaomimac
