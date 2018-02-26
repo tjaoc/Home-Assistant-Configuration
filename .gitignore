@@ -34,3 +34,4 @@ pyozw.sqlite
 !/.gitignore
 hadaemon
 __pycache__/
+entity_registry.yaml
