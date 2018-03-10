@@ -147,10 +147,6 @@ camera:
 #    password: !secret sensor_onvif_password
 #    port: !secret sensor_onvif_port
 
-# Microsoft Face - Testing
-#microsoft_face:
-#  api_key: !secret microsoftface_api
-
 # IFTTT Key
 ifttt:
   key: !secret ifttt_api
@@ -170,13 +166,6 @@ mqtt:
 #  port: !secret cloud_mqtt_port
 #  username: !secret cloud_mqtt_username
 #  password: !secret cloud_mqtt_password
-
-# MQTT Control Panel
-alarm_control_panel:
-  - platform: manual_mqtt
-    state_topic: "home/alarm"
-    command_topic: "home/alarm/set"
-    code: !secret alarm_code
 
 #   Owntracks
 device_tracker:
@@ -238,10 +227,8 @@ zone 3:
 
 # Single Files
 
-#automation: !include automations.yaml
 #dialogflow: !include includes/dialogflow.yaml
 input_boolean: !include includes/input_boolean.yaml
-input_select: !include includes/input_select.yaml
 input_number: !include includes/input_number.yaml
 light: !include includes/light.yaml
 notify: !include includes/notify.yaml
@@ -254,7 +241,6 @@ scene: !include includes/scene.yaml
 script: !include includes/script.yaml
 switch: !include includes/switch.yaml
 #image_processing: !include includes/image_processing.yaml
-
 
 # Merge List
 

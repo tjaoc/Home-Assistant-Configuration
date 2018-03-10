@@ -5,6 +5,14 @@
 #   @description    :   Washing Machine monitoring and reminders
 #   @url            :   https://philhawthorne.com/making-dumb-dishwashers-and-washing-machines-smart-alerts-when-the-dishes-and-clothes-are-cleaned/
 ###############################################################################
+homeassistant:
+  customize:
+    sensor.washing_machine_status:
+      icon: mdi:washing-machine
+    switch.plug_158d0001debe7a:
+      friendly_name: Washing Machine Switch
+    binary_sensor.door_window_sensor_158d00019f886a:
+      friendly_name: Washing Machine Door Sensor
 
 group:
   washing_machine:

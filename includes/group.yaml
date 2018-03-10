@@ -57,35 +57,7 @@ info_view:
     - group.recycle_schedule
     - group.projector_room_remote
     - group.speech_functions
-    # Groups
-media_living_room_home:
-  name: Media Living Room Home
-  entities:
-    - media_player.living_room_home
-media_living_room_tv:
-  name: Media Living TV
-  entities:
-    - media_player.tv_ua55ju6400
-media_living_room:
-  name: Media Living Room
-  entities:
-    - media_player.living_room
-media_bed_room:
-  name: Media Bed Room
-  entities:
-    - media_player.bed_room
-media_bedroom_speaker:
-  name: Media Bed Room Speaker
-  entities:
-    - media_player.bedroom_speaker
-media_outside:
-  name: Media Outside
-  entities:
-    - media_player.outside
-media_spotify:
-  name: Media Spotify
-  entities:
-    - media_player.spotify
+# Groups
 family:
   name: Family
   entities:
@@ -98,14 +70,6 @@ scripts:
     - script.good_night
     - script.start_air_conditioner
     - script.stop_air_conditioner
-security:
-  name: Security
-  entities:
-    - alarm_control_panel.ha_alarm
-    - binary_sensor.motion
-    - binary_sensor.motion_sensor_158d000165627b
-    - binary_sensor.door_window_sensor_158d00019f3211
-    - binary_sensor.door_window_sensor_158d000186f0ec
 cameras:
   name: Cameras
   entities:
@@ -136,40 +100,6 @@ infolinks:
     - weblink.nzb_get
     - weblink.sonarr
     - weblink.radarr
-network:
-  name: Network
-  entities:
-    - sensor.speedtest_ping
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.nzbget_speed
-    - switch.nzbget_switch
-    - sensor.uptime
-    - sensor.livingroomgooglehome
-    - sensor.livingroomtv
-    - sensor.livingroomchromecast
-    - sensor.bedroomchromecast
-    - sensor.outsidechromecast
-    - sensor.xboxone
-    - sensor.ps4
-synology:
-  name: "Synology"
-  entities:
-    - sensor.cpu_load_total
-    - sensor.memory_usage_real
-    - sensor.status_volume_1
-    - sensor.volume_used_volume_1
-    - sensor.status_volume_2
-    - sensor.volume_used_volume_2
-    - sensor.maximum_disk_temp_volume_2
-    - sensor.status_volume_3
-ups:
-  name: "UPS"
-  entities:
-    - sensor.ups_status
-    - sensor.ups_load
-    - sensor.ups_battery_runtime_mins
-    - sensor.ups_battery_charge
 automation_override:
   name: Automation Override
   control: hidden

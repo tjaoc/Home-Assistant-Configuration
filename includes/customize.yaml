@@ -4,69 +4,16 @@
 # Icons from: https://materialdesignicons.com/
 ############################################################
 
-media_player.living_room_home:
-  friendly_name: Living Room Home
-media_player.tv_ua55ju6400:
-  friendly_name: Living Room TV
-media_player.living_room:
-  friendly_name: Living Room Chromecast
-media_player.outside:
-  friendly_name: Outside Chromecast Audio
-media_player.bed_room:
-  friendly_name: Bed Room Chromecast
 sensor.weather_minimum:
  icon: 'mdi:thermometer'
 sensor.weather_maximum:
  icon: 'mdi:thermometer'
-sensor.speedtest_download:
- icon: 'mdi:speedometer'
-sensor.speedtest_upload:
-  icon: 'mdi:speedometer'
-sensor.speedtest_ping:
-  icon: 'mdi:speedometer'
-sensor.nzbget_speed:
-  friendly_name: Current NZBGet Speed
-  icon: 'mdi:download'
-sensor.xboxone:
-  icon: 'mdi:xbox'
-sensor.ps4:
-  icon: 'mdi:playstation'
-sensor.livingroomgooglehome:
-  icon: 'mdi:google-home'
-sensor.livingroomchromecast:
-  icon: 'mdi:cast'
-sensor.bedroomchromecast:
-  icon: 'mdi:cast'
-sensor.outsidechromecast:
-  icon: 'mdi:cast'
-sensor.livingroomtv:
-  icon: 'mdi:television'
-sensor.cpu_load_total:
-  friendly_name: CPU Usage
-sensor.memory_usage_real:
-  friendly_name: Memory Usage
-sensor.status_volume_2:
-  friendly_name: Volume 2 Status
-sensor.volume_used_volume_1:
-  friendly_name: Volume 1 Usage
-sensor.volume_used_volume_2:
-  friendly_name: Volume 2 Usage
-sensor.maximum_disk_temp_volume_2:
-  friendly_name: Volume 2 Temperature
-sensor.status_volume_1:
-  friendly_name: Volume 1 Status
-sensor.status_volume_3:
-  friendly_name: Volume 3 Status
 sensor.temperature_158d0001a2e878:
   friendly_name: Bedroom Temperature
   icon: mdi:thermometer
 sensor.humidity_158d0001a2e878:
   friendly_name: Bedroom Humidity
-  icon: mdi.water-percent
-sensor.washing_machine_status:
-  icon: mdi:washing-machine
-switch.plug_158d0001debe7a:
-  friendly_name: Washing Machine Switch
+  icon: mdi:water-percent
 binary_sensor.switch_158d00016449a2:
   friendly_name: Spare Switch
 binary_sensor.switch_158d0001a21086:
@@ -85,8 +32,6 @@ binary_sensor.door_window_sensor_158d00019fbe38:
   friendly_name: Living Room Window Sensor 2
 binary_sensor.door_window_sensor_158d0001a4a872:
   friendly_name: Living Room Window Sensor 3
-binary_sensor.door_window_sensor_158d00019f886a:
-  friendly_name: Washing Machine Door Sensor
 binary_sensor.motion_sensor_158d000165627b:
   friendly_name: Hallway Motion
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:
@@ -98,10 +43,6 @@ sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
 sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity:
   friendly_name: Living Room Seismic Intensity
   icon: mdi:vibrate
-sensor.ups_status:
-  icon: mdi:information-outline
-sensor.ups_battery_runtime_mins:
-  icon: mdi:timer
 binary_sensor.motion:
   friendly_name: Living Room Motion
 binary_sensor.tampering:

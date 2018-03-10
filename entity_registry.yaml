@@ -49,3 +49,102 @@ media_player.xboxone_2:
 media_player.rachels_iphone:
   platform: plex
   unique_id: 34081F5E-6594-4C3F-8822-F25FD9610A32
+binary_sensor.motion_sensor_158d000165627b:
+  platform: xiaomi_aqara
+  unique_id: status158d000165627b
+binary_sensor.wall_switch_left_158d000170ef78:
+  platform: xiaomi_aqara
+  unique_id: channel_0158d000170ef78
+binary_sensor.motion_sensor_158d00015b5ae2:
+  platform: xiaomi_aqara
+  unique_id: status158d00015b5ae2
+binary_sensor.motion_sensor_158d00016be35b:
+  platform: xiaomi_aqara
+  unique_id: status158d00016be35b
+binary_sensor.door_window_sensor_158d0001d63977:
+  platform: xiaomi_aqara
+  unique_id: status158d0001d63977
+binary_sensor.door_window_sensor_158d0001e037dc:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e037dc
+binary_sensor.switch_158d000186e632:
+  platform: xiaomi_aqara
+  unique_id: status158d000186e632
+binary_sensor.wall_switch_both_158d000170ef78:
+  platform: xiaomi_aqara
+  unique_id: dual_channel158d000170ef78
+binary_sensor.switch_158d00016449a2:
+  platform: xiaomi_aqara
+  unique_id: status158d00016449a2
+binary_sensor.door_window_sensor_158d00019fbe38:
+  platform: xiaomi_aqara
+  unique_id: status158d00019fbe38
+binary_sensor.wall_switch_right_158d000170ef78:
+  platform: xiaomi_aqara
+  unique_id: channel_1158d000170ef78
+binary_sensor.door_window_sensor_158d0001a4a872:
+  platform: xiaomi_aqara
+  unique_id: status158d0001a4a872
+binary_sensor.door_window_sensor_158d0001d7acfc:
+  platform: xiaomi_aqara
+  unique_id: status158d0001d7acfc
+binary_sensor.door_window_sensor_158d0001e037b3:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e037b3
+binary_sensor.door_window_sensor_158d0001e0343b:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e0343b
+binary_sensor.door_window_sensor_158d0001a22f9e:
+  platform: xiaomi_aqara
+  unique_id: status158d0001a22f9e
+binary_sensor.door_window_sensor_158d000186f0ec:
+  platform: xiaomi_aqara
+  unique_id: status158d000186f0ec
+binary_sensor.switch_158d0001a21086:
+  platform: xiaomi_aqara
+  unique_id: status158d0001a21086
+binary_sensor.door_window_sensor_158d00019f3211:
+  platform: xiaomi_aqara
+  unique_id: status158d00019f3211
+binary_sensor.door_window_sensor_158d00019f886a:
+  platform: xiaomi_aqara
+  unique_id: status158d00019f886a
+sensor.illumination_34ce008d81ef:
+  platform: xiaomi_aqara
+  unique_id: illumination34ce008d81ef
+sensor.humidity_158d0001a2e878:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001a2e878
+sensor.temperature_158d0001a2e878:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001a2e878
+switch.plug_158d0001debe7a:
+  platform: xiaomi_aqara
+  unique_id: status158d0001debe7a
+light.gateway_light_34ce008d81ef:
+  platform: xiaomi_aqara
+  unique_id: rgb34ce008d81ef
+media_player.living_room:
+  platform: cast
+  unique_id: 8191c65f-a624-ff89-1df0-13f6402337a1
+media_player.outside:
+  platform: cast
+  unique_id: d55129a5-1002-3872-f852-5fcc85a2ed48
+media_player.living_room_home:
+  platform: cast
+  unique_id: a1bdc9c4-7ac4-1448-cc9f-f0c19c713f56
+media_player.home_group:
+  platform: cast
+  unique_id: 63ecd100-33e6-4a37-a3be-1377d6cfff1c
+media_player.bedroom_speaker:
+  platform: cast
+  unique_id: 30b9a844-cb9a-1781-5e45-55a331c54f7c
+media_player.chrome:
+  platform: plex
+  unique_id: b20qzv753fpfrujxvy1d9a0l
+media_player.bed_room:
+  platform: cast
+  unique_id: d2c8e4eb-149c-571f-c221-57609669bd11
+media_player.tab4_8:
+  platform: plex
+  unique_id: 488220b70f9c66df-com-plexapp-android
