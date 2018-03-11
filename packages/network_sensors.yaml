@@ -47,7 +47,7 @@ group:
       - sensor.nzbget_speed
       - switch.nzbget_switch
       - sensor.uptime
-      - sensor.xaomigateway
+      - sensor.xiaomigateway
       - sensor.livingroomgooglehome
       - sensor.bedroomgooglehomemini
       - sensor.livingroomtv

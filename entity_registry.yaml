@@ -1,150 +1,208 @@
 sensor.rachels_iphone_battery_state:
+  name:
   platform: ios
   unique_id: state_rachels_iphone
 sensor.rachels_iphone_battery_level:
+  name:
   platform: ios
   unique_id: level_rachels_iphone
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor:
+  name:
   platform: zwave
   unique_id: 2-72057594076463104
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:
+  name:
   platform: zwave
   unique_id: 2-72057594076479506
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
+  name:
   platform: zwave
   unique_id: 2-72057594076479538
 sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity:
+  name:
   platform: zwave
   unique_id: 2-72057594076479890
 sensor.fibaro_system_fgms001zw5_motion_sensor_alarm_type:
+  name:
   platform: zwave
   unique_id: 2-72057594077528065
 sensor.fibaro_system_fgms001zw5_motion_sensor_alarm_level:
+  name:
   platform: zwave
   unique_id: 2-72057594077528081
 sensor.fibaro_system_fgms001zw5_motion_sensor_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 2-72057594077528097
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar:
+  name:
   platform: zwave
   unique_id: 2-72057594077528225
 sensor.fibaro_system_fgms001zw5_motion_sensor_general:
+  name:
   platform: zwave
   unique_id: 2-72057594078232577
 media_player.galaxy_s8:
+  name:
   platform: plex
   unique_id: 18e38218842ea1fd-com-plexapp-android
 media_player.plex_web_chrome:
+  name:
   platform: plex
   unique_id: 3y3u1cqkua29ou57b8vbejob
 media_player.tv_ua55ju6400:
+  name:
   platform: plex
   unique_id: cpcj6oterj346
 media_player.xboxone:
+  name:
   platform: plex
   unique_id: fkldvefio46i8utno3050qs0
 media_player.xboxone_2:
+  name:
   platform: plex
   unique_id: jsrn2sbpqes2qjmd1q8uubkp
 media_player.rachels_iphone:
+  name:
   platform: plex
   unique_id: 34081F5E-6594-4C3F-8822-F25FD9610A32
 binary_sensor.motion_sensor_158d000165627b:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d000165627b
 binary_sensor.wall_switch_left_158d000170ef78:
+  name:
   platform: xiaomi_aqara
   unique_id: channel_0158d000170ef78
 binary_sensor.motion_sensor_158d00015b5ae2:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00015b5ae2
 binary_sensor.motion_sensor_158d00016be35b:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00016be35b
 binary_sensor.door_window_sensor_158d0001d63977:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001d63977
 binary_sensor.door_window_sensor_158d0001e037dc:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001e037dc
 binary_sensor.switch_158d000186e632:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d000186e632
 binary_sensor.wall_switch_both_158d000170ef78:
+  name:
   platform: xiaomi_aqara
   unique_id: dual_channel158d000170ef78
 binary_sensor.switch_158d00016449a2:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00016449a2
 binary_sensor.door_window_sensor_158d00019fbe38:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00019fbe38
 binary_sensor.wall_switch_right_158d000170ef78:
+  name:
   platform: xiaomi_aqara
   unique_id: channel_1158d000170ef78
 binary_sensor.door_window_sensor_158d0001a4a872:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001a4a872
 binary_sensor.door_window_sensor_158d0001d7acfc:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001d7acfc
 binary_sensor.door_window_sensor_158d0001e037b3:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001e037b3
 binary_sensor.door_window_sensor_158d0001e0343b:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001e0343b
 binary_sensor.door_window_sensor_158d0001a22f9e:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001a22f9e
 binary_sensor.door_window_sensor_158d000186f0ec:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d000186f0ec
 binary_sensor.switch_158d0001a21086:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001a21086
 binary_sensor.door_window_sensor_158d00019f3211:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00019f3211
 binary_sensor.door_window_sensor_158d00019f886a:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d00019f886a
 sensor.illumination_34ce008d81ef:
+  name:
   platform: xiaomi_aqara
   unique_id: illumination34ce008d81ef
 sensor.humidity_158d0001a2e878:
+  name:
   platform: xiaomi_aqara
   unique_id: humidity158d0001a2e878
 sensor.temperature_158d0001a2e878:
+  name:
   platform: xiaomi_aqara
   unique_id: temperature158d0001a2e878
 switch.plug_158d0001debe7a:
+  name:
   platform: xiaomi_aqara
   unique_id: status158d0001debe7a
 light.gateway_light_34ce008d81ef:
+  name:
   platform: xiaomi_aqara
   unique_id: rgb34ce008d81ef
 media_player.living_room:
+  name:
   platform: cast
   unique_id: 8191c65f-a624-ff89-1df0-13f6402337a1
 media_player.outside:
+  name:
   platform: cast
   unique_id: d55129a5-1002-3872-f852-5fcc85a2ed48
 media_player.living_room_home:
+  name:
   platform: cast
   unique_id: a1bdc9c4-7ac4-1448-cc9f-f0c19c713f56
 media_player.home_group:
+  name:
   platform: cast
   unique_id: 63ecd100-33e6-4a37-a3be-1377d6cfff1c
 media_player.bedroom_speaker:
+  name:
   platform: cast
   unique_id: 30b9a844-cb9a-1781-5e45-55a331c54f7c
 media_player.chrome:
+  name:
   platform: plex
   unique_id: b20qzv753fpfrujxvy1d9a0l
 media_player.bed_room:
+  name:
   platform: cast
   unique_id: d2c8e4eb-149c-571f-c221-57609669bd11
 media_player.tab4_8:
+  name:
   platform: plex
   unique_id: 488220b70f9c66df-com-plexapp-android
+switch.kitchen_light:
+  name: Kitchen
+  platform: zwave
+  unique_id: 3-72057594093060096
+switch.livingroom_light:
+  name: Living Room
+  platform: zwave
+  unique_id: 3-144115188130988032

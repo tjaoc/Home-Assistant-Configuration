@@ -12,8 +12,8 @@ global_parameters:
     use_hass_icon: 1
 # Layout
 layout:
-    - clock(2x1),                                       current_temperature, current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
-    - entry_light,          entryway_light,             living_room_light,   projector_room_light, good_night_script(2x1), air_conditioner_switch
+    - clock(2x1),                                       current_temperature,       current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
+    - entry_light,          entryway_light,             living_room_light_switch,  kitchen_light_switch, good_night_script(2x1), air_conditioner_switch
     - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch
     - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   hallway_motion(2x1)
     - include: bottom_panel_main
@@ -111,20 +111,6 @@ entryway_light:
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
 
-living_room_light:
-    widget_type: light
-    title: Living Room Light
-    entity: light.living_room
-    icon_on: mdi-lightbulb
-    icon_off: mdi-lightbulb
-
-projector_room_light:
-    widget_type: light
-    title: Projector Room Light
-    entity: light.projector_room
-    icon_on: mdi-lightbulb
-    icon_off: mdi-lightbulb
-
 study_desk_lamp_light:
     widget_type: light
     title: Study Desk Lamp
@@ -146,6 +132,20 @@ trent_bedside_light:
     icon_on: mdi-lamp
     icon_off: mdi-lamp
 
+living_room_light_switch:
+    widget_type: switch
+    title: Living Room Light
+    entity: switch.livingroom_light
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+
+kitchen_light_switch:
+    widget_type: switch
+    title: Kitchen Light
+    entity: switch.kitchen_light
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+
 livingroomlamp_switch:
     widget_type: switch
     title: Living Room Lamp
@@ -157,8 +157,8 @@ outsideheater_switch:
     widget_type: switch
     title: Outside Heater
     entity: switch.outside_heater
-    icon_on: mdi-lamp
-    icon_off: mdi-lamp
+    icon_on: mdi-fire
+    icon_off: mdi-fire
 
 mediaplayer_dimmer:
     widget_type: switch

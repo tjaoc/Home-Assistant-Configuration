@@ -25,25 +25,6 @@
   brightness: true
   effect: true
 
-- platform: mqtt_json
-  name: "Projector Room"
-  command_topic: milight/commands/0x11/rgb_cct/3
-  state_topic: milight/states/0x11/rgb_cct/3
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-
-- platform: mqtt_json
-  name: "Living Room"
-  command_topic: milight/commands/0x12/rgb_cct/1
-  state_topic: milight/states/0x12/rgb_cct/1
-  color_temp: true
-  rgb: true
-  brightness: true
-  effect: true
-
-
 ############
 # Yeelight
 ############

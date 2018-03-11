@@ -80,8 +80,8 @@ lights:
   entities:
     - light.entry
     - light.entryway
-    - light.living_room
-    - light.projector_room
+    - switch.livingroom_light
+    - switch.kitchen_light
     - light.trent_bedside
     - light.rachel_bedside
     - light.study_desk_lamp

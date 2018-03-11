@@ -60,7 +60,20 @@ script.stop_air_conditioner:
 switch.air_conditioner:
   friendly_name: Air Conditioner
   icon: mdi:air-conditioner
-
+switch.living_room_lamp:
+  icon: mdi:lamp
+light.trent_bedside:
+  icon: mdi:lamp
+light.rachel_bedside:
+  icon: mdi:lamp
+light.study_desk_lamp:
+  icon: mdi:lamp
+switch.outside_heater:
+  icon: mdi:fire
+switch.livingroom_light:
+  icon: mdi:lightbulb
+switch.kitchen_light:
+  icon: mdi:lightbulb
 
 # Hidden Items
 media_player._ua55ju6400_ua55ju6400:
