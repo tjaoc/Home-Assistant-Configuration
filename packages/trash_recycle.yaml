@@ -44,12 +44,14 @@ homeassistant:
 
 group:
   Trash Schedule:
+    control: hidden
     entities:
       - sensor.trash_day
       - sensor.trash_pickup_day
       - input_select.trash_pickup_day
 
   Recycle Schedule:
+    control: hidden
     entities:
       - sensor.recycle_day
       - sensor.recycle_pickup_day
@@ -59,6 +61,7 @@ group:
       - input_select.recycle_pickup_week
 
   Date Time:
+    control: hidden
     entities:
       - sensor.time
       - sensor.date

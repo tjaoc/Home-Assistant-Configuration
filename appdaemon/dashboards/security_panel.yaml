@@ -4,6 +4,8 @@ trent_presence:
     device: hauser_trent
     icon_on: mdi-human-male
     icon_off: mdi-human-male
+    icon_style_active: "color: #4bcdea"
+    icon_style_inactive: "color: #4bcdea"
 
 rachel_presence:
     widget_type: device_tracker
@@ -11,6 +13,8 @@ rachel_presence:
     device: rachels_iphone
     icon_on: mdi-human-female
     icon_off: mdi-human-female
+    icon_style_active: "color: #ea4b82"
+    icon_style_inactive: "color: #ea4b82"
 
 livingroom_motion:
     widget_type: binary_sensor
@@ -30,7 +34,12 @@ alarm:
     widget_type: alarm
     entity: alarm_control_panel.ha_alarm
     title: Alarm
+
+front_door_lock:
+    widget_type: lock
+    title: Front Door Lock
+    entity: lock.front_door
+    title_style: "color: $blue"
     
 layout: 
-    - trent_presence(2x1), livingroom_motion(1x1), alarm(2x1), hallway_motion(1x1), rachel_presence(2x1)
-#, load_weather_panel(2x1),load_controls(2x1),load_floorplan(2x1)
+    - trent_presence(1x1), livingroom_motion(1x1), front_door_lock(2x1), alarm(2x1), hallway_motion(1x1), rachel_presence(1x1)

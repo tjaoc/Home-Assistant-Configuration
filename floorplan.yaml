@@ -71,21 +71,21 @@
         - name: Text Sensors
           entities:
              - device_tracker.trents_galaxy
-             - device_tracker.2c8a72bbc83c
+             - device_tracker.rachels_iphone
              - sensor.time
              - sensor.date
           text_template: '${entity.state ? entity.state : "unknown"}'
         - name: Switches
           entities:
              - switch.living_room_lamp
-             - switch.bed_trent_lamp
-             - switch.bed_rachel_lamp
+             - light.trent_bedside
+             - light.rachel_bedside
              - switch.outside_heater
              - light.study_desk_lamp
              - light.entryway
              - light.entry
-             - light.living_room
-             - light.kitchen
+             - switch.livingroom_light
+             - switch.kitchen_light
              - light.dining_room
              - light.study
              - light.projector_room
@@ -134,17 +134,32 @@
               class: 'mediaplayer-on'
             - state: 'playing'
               class: 'mediaplayer-on'
-              
-                #  DOORS  #
-        - name: Doors
+
+                #  WINDOWS  #
+        - name: Windows
           entities:
+            - binary_sensor.door_window_sensor_158d0001d7acfc
+            - binary_sensor.door_window_sensor_158d0001e037dc
+            - binary_sensor.door_window_sensor_158d00019fbe38
+            - binary_sensor.door_window_sensor_158d0001a4a872
             - binary_sensor.door_window_sensor_158d00019f3211
             - binary_sensor.door_window_sensor_158d000186f0ec
           states:
             - state: 'off'
-              class: 'door_closed'
+              class: 'window_closed'
             - state: 'on'
-              class: 'door_open'
+              class: 'window_open'
+
+                #  Locks  #
+        - name: Locks
+          entities:
+            - lock.front_door
+          states:
+            - state: 'locked'
+              class: 'lock_locked'
+            - state: 'unlocked'
+              class: 'lock_unlocked'
+
               
 #        - name: thermostat_temp
 #          entities:

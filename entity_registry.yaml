@@ -206,3 +206,31 @@ switch.livingroom_light:
   name: Living Room
   platform: zwave
   unique_id: 3-144115188130988032
+lock.front_door:
+  name: Front Door Lock
+  platform: zwave
+  unique_id: 4-72057594110836736
+sensor.locstar_unknown_type8015_id0003_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.locstar_unknown_type8015_id0003_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.locstar_unknown_type8015_id0003_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.locstar_unknown_type8015_id0003_access_control:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082641
+sensor.locstar_unknown_type8015_id0003_burglar:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082657
+sensor.locstar_unknown_type8015_id0003_power_management:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082673

@@ -8,6 +8,7 @@
 
 group:
   harmonytv:
+    control: hidden
     name: Harmony Remote
     entities:
       - sensor.harmony_activity

@@ -13,4 +13,4 @@ appdaemon:
 hadashboard:
   dash_url: !secret dash_url
   dash_dir: /config/appdaemon/dashboards
-
+  dash_password: !secret dash_password

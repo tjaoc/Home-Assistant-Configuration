@@ -9,6 +9,7 @@
 group:
   radio:
     name: Radio
+    control: hidden
     entities:
       - input_select.radio_player
       - input_select.radio_station

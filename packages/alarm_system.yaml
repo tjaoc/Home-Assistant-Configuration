@@ -8,12 +8,12 @@
 group:
   security:
     name: Security
+    control: hidden
     entities:
+      - lock.front_door
       - alarm_control_panel.ha_alarm
       - binary_sensor.motion
       - binary_sensor.motion_sensor_158d000165627b
-      - binary_sensor.door_window_sensor_158d00019f3211
-      - binary_sensor.door_window_sensor_158d000186f0ec
 
 # MQTT Control Panel
 alarm_control_panel:

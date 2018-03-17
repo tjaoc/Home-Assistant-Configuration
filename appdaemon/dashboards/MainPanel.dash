@@ -13,7 +13,7 @@ global_parameters:
 # Layout
 layout:
     - clock(2x1),                                       current_temperature,       current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
-    - entry_light,          entryway_light,             living_room_light_switch,  kitchen_light_switch, good_night_script(2x1), air_conditioner_switch
+    - entry_light,          entryway_light,             living_room_light_switch,  kitchen_light_switch, good_night_script(2x1), front_door_lock, air_conditioner_switch
     - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch
     - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   hallway_motion(2x1)
     - include: bottom_panel_main
@@ -46,6 +46,8 @@ trent_presence:
     device: hauser_trent
     icon_on: mdi-human-male
     icon_off: mdi-human-male
+    icon_style_active: "color: #4bcdea"
+    icon_style_inactive: "color: #4bcdea"
 
 rachel_presence:
     widget_type: device_tracker
@@ -53,6 +55,8 @@ rachel_presence:
     device: rachels_iphone
     icon_on: mdi-human-female
     icon_off: mdi-human-female
+    icon_style_active: "color: #ea4b82"
+    icon_style_inactive: "color: #ea4b82"
 
 livingroom_temperature:
     widget_type: sensor
@@ -181,3 +185,8 @@ air_conditioner_switch:
     entity: switch.air_conditioner
     icon_on: mdi-fan
     icon_off: mdi-fan-off
+    
+front_door_lock:
+    widget_type: lock
+    title: Front Door Lock
+    entity: lock.front_door

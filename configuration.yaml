@@ -175,14 +175,15 @@ device_tracker:
       trents_galaxy: zanzito/trent/location
 # NMAP Based Device Tracking
   - platform: nmap_tracker
-    hosts: 192.168.1.1/24
+    hosts: !secret nmap_hosts
     exclude:
-     - 192.168.1.105
-     - 192.168.1.100
+     - !secret hassbian_ip
+     - !secret sensor_synology_host
 
 #ZWave Devices
 zwave:
   usb_path: /dev/ttyACM0
+  network_key: !secret secure_zwave_key
 #  polling_interval: 60000
 #  autoheal: true
 

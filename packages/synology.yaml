@@ -27,6 +27,7 @@ homeassistant:
 group:
   synology:
     name: "Synology"
+    control: hidden
     entities:
       - sensor.cpu_load_total
       - sensor.memory_usage_real

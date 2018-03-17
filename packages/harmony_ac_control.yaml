@@ -9,6 +9,7 @@
 group:
   airconditioner:
     name: AC Split System
+    control: hidden
     entities:
       - input_select.ac_operation_mode
       - input_select.ac_fan_mode
