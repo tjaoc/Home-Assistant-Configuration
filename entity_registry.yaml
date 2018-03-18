@@ -207,7 +207,7 @@ switch.livingroom_light:
   platform: zwave
   unique_id: 3-144115188130988032
 lock.front_door:
-  name: Front Door Lock
+  name: Front Door Locked
   platform: zwave
   unique_id: 4-72057594110836736
 sensor.locstar_unknown_type8015_id0003_alarm_type:

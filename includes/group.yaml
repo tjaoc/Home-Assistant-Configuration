@@ -112,6 +112,7 @@ automation_override:
     - input_boolean.speech_notifications
     - input_boolean.trash_reminders
     - input_boolean.disable_auto_living_room_lamp
+    - input_boolean.disable_autolock_front_door
     - input_boolean.disable_media_player_light_control
     - input_boolean.disable_current_temperature_notification
     - input_boolean.disable_morning_notification
