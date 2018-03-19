@@ -14,6 +14,9 @@ input_boolean:
   disable_autolock_front_door:
     name: Disable Auto Lock Front Door
     initial: off
+  
+timer:
+  front_door_lock:
 
 ###############################################################################
 #                               Automations
@@ -28,7 +31,7 @@ automation:
       - service: timer.start
         entity_id: timer.front_door_lock
         data:
-          duration: '00:2:00'
+          duration: '00:30:00'
 
   - alias: Cancel Front Door Autolock Timer
     trigger:
@@ -56,4 +59,4 @@ automation:
         state: 'off'
     action:
       - service: lock.lock
-        entity_id: lock.front_door 
+        entity_id: lock.front_door
