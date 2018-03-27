@@ -11,20 +11,18 @@
   - [ ] Setup Milight Party scene.
 - [ ] Setup Motion Controlled Hallway Light
 - [ ] Dim Hallway light in Morning / Night
-- [ ] Investigate, install and configure new Xiaomi Hub and components
+- [x] Investigate, install and configure new Xiaomi Hub and components
   - [x] Xiaomi Hub
   - [x] Xiaomi Smart Door Sensors
   - [x] Xiaomi Smart Human Body Sensors
   - [x] Xiami Smart Wireless Switch
   - [x] Xiami Mi Smart Zigbee Socket (Use for Monitoring Washing Machine / Projector Power)
-  - [ ] Additional Components
-- [ ] Setup and wallmount Android Tablet with Dashboard
-- [ ] Update Floorplan with additional functionality
+- [x] Setup and wallmount Android Tablet with Dashboard
+- [x] Update Floorplan with additional functionality
 - [ ] Add Missing AC Split System Controls
-- [ ] Implement TV Time Scene (dim and colour) at Sunset (if home and TV is on)
-- [ ] Implement Guest mode to disable certain interior automations. - Trigger via Google Home + IFTTT 
+- [ ] Implement Guest mode to disable certain interior automations. - Trigger via Google Home
 - [ ] Implement lights to be turned off if noone is home and no motion detection
-- [ ] Setup Night and Day theme - Also apply to Floorplan
+- [x] Setup Night and Day theme - Also apply to Floorplan
 - [x] Purchase UPS and implement within HASS
 
 - [ ] Convince fiance that Home Automation is a good thing!
