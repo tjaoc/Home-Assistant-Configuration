@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: Main Panel
-widget_dimensions: [120, 120]
+widget_dimensions: [154, 154]
 widget_size: [1, 1]
 widget_margins: [5, 5]
 columns: 8
@@ -20,7 +20,9 @@ layout:
 
 clock:
     widget_type: clock
-    time_style: "color: orange"
+    widget_style: "font-size: 120%"
+    time_style: "color: orange; font-size: 280%"
+    date_style: "font-size: 120%"
 
 weather:
     widget_type: weather
@@ -32,6 +34,8 @@ current_temperature:
     units: "&deg;C"
     precision: 0
     entity: sensor.weather_temperature
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
  
 current_humidity:
     widget_type: sensor
@@ -39,15 +43,19 @@ current_humidity:
     units: "%"
     precision: 0
     entity: sensor.weather_humidity
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
 
 trent_presence:
     widget_type: device_tracker
     title: Trent
-    device: hauser_trent
+    device: trents_galaxy
     icon_on: mdi-human-male
     icon_off: mdi-human-male
-    icon_style_active: "color: #4bcdea"
-    icon_style_inactive: "color: #4bcdea"
+    title_style: "font-size: 120%"
+    state_text_style: "font-size: 120%"
+    icon_style_active: "color: #4bcdea; font-size: 400%"
+    icon_style_inactive: "color: #4bcdea; font-size: 400%"
 
 rachel_presence:
     widget_type: device_tracker
@@ -55,8 +63,10 @@ rachel_presence:
     device: rachels_iphone
     icon_on: mdi-human-female
     icon_off: mdi-human-female
-    icon_style_active: "color: #ea4b82"
-    icon_style_inactive: "color: #ea4b82"
+    title_style: "font-size: 120%"
+    state_text_style: "font-size: 120%"
+    icon_style_active: "color: #ea4b82; font-size: 400%"
+    icon_style_inactive: "color: #ea4b82; font-size: 400%"
 
 livingroom_temperature:
     widget_type: sensor
@@ -64,6 +74,8 @@ livingroom_temperature:
     units: "&deg;C"
     precision: 0
     entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
     
 livingroom_lux:
     widget_type: sensor
@@ -72,6 +84,8 @@ livingroom_lux:
     precision: 0
     shorten: 1
     entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
 
 bedroom_temperature:
     widget_type: sensor
@@ -79,6 +93,8 @@ bedroom_temperature:
     units: "&deg;C"
     precision: 0
     entity: sensor.temperature_158d0001a2e878
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
 
 bedroom_humidity:
     widget_type: sensor
@@ -86,6 +102,8 @@ bedroom_humidity:
     units: "%"
     precision: 0
     entity: sensor.humidity_158d0001a2e878
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
 
 livingroom_motion:
     widget_type: binary_sensor
@@ -93,6 +111,9 @@ livingroom_motion:
     entity: binary_sensor.motion
     icon_on: mdi-run
     icon_off: mdi-walk
+    title_style: "font-size: 120%"
+    icon_style_active: "font-size: 400%"
+    icon_style_inactive: "font-size: 400%"
     
 hallway_motion:
     widget_type: binary_sensor
@@ -100,6 +121,9 @@ hallway_motion:
     entity: binary_sensor.motion_sensor_158d000165627b
     icon_on: mdi-run
     icon_off: mdi-walk
+    title_style: "font-size: 120%"
+    icon_style_active: "font-size: 400%"
+    icon_style_inactive: "font-size: 400%"
 
 entry_light:
     widget_type: light
@@ -107,6 +131,15 @@ entry_light:
     entity: light.entry
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+    text_style: "font-size: 120%"
+    level_style: "font-size: 120%"
+    level_up_style: "font-size: 120%"
+    level_down_style: "font-size: 120%"
 
 entryway_light:
     widget_type: light
@@ -114,6 +147,15 @@ entryway_light:
     entity: light.entryway
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+    text_style: "font-size: 120%"
+    level_style: "font-size: 120%"
+    level_up_style: "font-size: 120%"
+    level_down_style: "font-size: 120%"
 
 study_desk_lamp_light:
     widget_type: light
@@ -121,6 +163,15 @@ study_desk_lamp_light:
     entity: light.study_desk_lamp
     icon_on: mdi-lamp
     icon_off: mdi-lamp
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+    text_style: "font-size: 120%"
+    level_style: "font-size: 120%"
+    level_up_style: "font-size: 120%"
+    level_down_style: "font-size: 120%"
 
 rachel_bedside_light:
     widget_type: light
@@ -128,6 +179,15 @@ rachel_bedside_light:
     entity: light.rachel_bedside
     icon_on: mdi-lamp
     icon_off: mdi-lamp
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+    text_style: "font-size: 120%"
+    level_style: "font-size: 120%"
+    level_up_style: "font-size: 120%"
+    level_down_style: "font-size: 120%"
     
 trent_bedside_light:
     widget_type: light
@@ -135,6 +195,15 @@ trent_bedside_light:
     entity: light.trent_bedside
     icon_on: mdi-lamp
     icon_off: mdi-lamp
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+    text_style: "font-size: 120%"
+    level_style: "font-size: 120%"
+    level_up_style: "font-size: 120%"
+    level_down_style: "font-size: 120%"
 
 living_room_light_switch:
     widget_type: switch
@@ -142,6 +211,11 @@ living_room_light_switch:
     entity: switch.livingroom_light
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 kitchen_light_switch:
     widget_type: switch
@@ -149,6 +223,11 @@ kitchen_light_switch:
     entity: switch.kitchen_light
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 livingroomlamp_switch:
     widget_type: switch
@@ -156,6 +235,11 @@ livingroomlamp_switch:
     entity: switch.living_room_lamp
     icon_on: mdi-lamp
     icon_off: mdi-lamp
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 outsideheater_switch:
     widget_type: switch
@@ -163,13 +247,23 @@ outsideheater_switch:
     entity: switch.outside_heater
     icon_on: mdi-fire
     icon_off: mdi-fire
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 mediaplayer_dimmer:
     widget_type: switch
     title: Media Player Dimmer
     entity: input_boolean.mediaplayer_dimmer_livingroom
     icon_on: mdi-television
-    icon_off: mdi-television  
+    icon_off: mdi-television
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 
 good_night_script:
@@ -178,6 +272,11 @@ good_night_script:
     entity: script.good_night
     icon_on: mdi-sleep
     icon_off: mdi-sleep
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 air_conditioner_switch:
     widget_type: switch
@@ -185,8 +284,17 @@ air_conditioner_switch:
     entity: switch.air_conditioner
     icon_on: mdi-fan
     icon_off: mdi-fan-off
-    
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+
 front_door_lock:
     widget_type: lock
     title: Front Door Lock
     entity: lock.front_door
+    title_style: "font-size: 120%"
+    widget_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"

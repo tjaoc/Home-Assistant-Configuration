@@ -113,7 +113,7 @@
         - name: Cameras
           entities:
             - camera.front_door
-            - camera.back_deck
+            - camera.back_door
           states:
             - state: 'idle'
               class: 'camera-idle'

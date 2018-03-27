@@ -33,7 +33,7 @@ sensor:
       harmony_activity:
         friendly_name: 'Harmony Activity'
         value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-        icon_template: >
+        icon_template: >-
           {% if is_state("states.remote.living_room.attributes.current_activity", "Watch TV") %}
             mdi:television-box
           {% elif is_state("states.remote.living_room.attributes.current_activity", "Watch Plex") %}

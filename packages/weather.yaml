@@ -42,11 +42,11 @@ sensor:
 #      - cloud_cover
       - humidity
 #      - pressure
-#      - visibility
+      - visibility
 #      - ozone
 #      - minutely_summary
-#      - hourly_summary
-#      - daily_summary
+      - hourly_summary
+      - daily_summary
       - temperature_max
       - temperature_min
 #      - apparent_temperature_max

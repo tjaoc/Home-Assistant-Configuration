@@ -8,8 +8,10 @@
 location.txt
 mqttssl
 appdaemon/*.log*
+custom_components/customizer/
 www/*.png
 www/custom_ui/floorplan/lib/
+www/custom_ui/state-card-floorplan.html
 www/harmony/
 appdaemon/compiled
 OZW_Log.txt

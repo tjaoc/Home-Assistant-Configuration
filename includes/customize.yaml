@@ -26,12 +26,16 @@ binary_sensor.door_window_sensor_158d00019f3211:
   icon: mdi:door
 binary_sensor.door_window_sensor_158d0001d7acfc:
   friendly_name: Bedroom Window Sensor
+  icon: mdi:window-closed
 binary_sensor.door_window_sensor_158d0001e037dc:
   friendly_name: Living Room Window Sensor 1
+  icon: mdi:window-closed
 binary_sensor.door_window_sensor_158d00019fbe38:
   friendly_name: Living Room Window Sensor 2
+  icon: mdi:window-closed
 binary_sensor.door_window_sensor_158d0001a4a872:
   friendly_name: Living Room Window Sensor 3
+  icon: mdi:window-closed
 binary_sensor.motion_sensor_158d000165627b:
   friendly_name: Hallway Motion
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:

@@ -83,6 +83,10 @@ panel_custom:
     url_path: floorplan
     config: !include floorplan.yaml
 
+# Custom UI - Hosted
+customizer:
+  custom_ui: hosted
+    
 # Checks for available updates
 updater:
 

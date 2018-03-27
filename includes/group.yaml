@@ -52,6 +52,7 @@ info_view:
     - group.ups
     - group.automation_override
     - group.mediaplayer_dimmer_livingroom
+    - group.fkiosk
     - group.multisensor
     - group.trash_schedule
     - group.recycle_schedule
