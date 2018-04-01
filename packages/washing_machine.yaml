@@ -115,7 +115,7 @@ automation:
           entity_id: input_select.washing_machine_status
           option: Finishing
 
-# Wait 2 minutes for us to be in the Finishing state before we
+# Wait 1 minutes for us to be in the Finishing state before we
 # decide the washing machine has finished. This way, if the
 # washing machine is in between cycles and the power drops, we
 # won't mark the washing machine cycle as finished too early.
@@ -149,11 +149,14 @@ automation:
         entity_id: binary_sensor.door_window_sensor_158d00019f886a
         to: 'on'
     condition:
-      condition: and
+      condition: or
       conditions:
         - condition: state
           entity_id: input_select.washing_machine_status
           state: Clean
+        - condition: state
+          entity_id: input_select.washing_machine_status
+          state: Finishing
     action:
       - service: input_select.select_option
         data:

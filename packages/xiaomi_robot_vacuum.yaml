@@ -29,7 +29,7 @@ input_boolean:
     initial: off
   disable_daily_vacuum:
     name: Disable Daily Vacuum Automation
-    initial: off
+    initial: on
   disable_dustbin_notification:
     name: Disable Dustbin Notification
     initial: off

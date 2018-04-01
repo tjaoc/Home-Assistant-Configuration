@@ -54,6 +54,7 @@ info_view:
     - group.mediaplayer_dimmer_livingroom
     - group.fkiosk
     - group.multisensor
+    - group.battery_levels
     - group.trash_schedule
     - group.recycle_schedule
     - group.projector_room_remote
