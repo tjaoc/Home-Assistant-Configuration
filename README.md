@@ -1,5 +1,9 @@
 # Home-Assistant-Configuration [![Build Status](https://travis-ci.org/stanvx/Home-Assistant-Configuration.svg?branch=master)](https://travis-ci.org/stanvx/Home-Assistant-Configuration)
 [Home Assistant](https://home-assistant.io/) configuration files (YAMLs). These are my Home Assistant configuration files.
+#### Navigation:
+* Home Assistant Configuration files are now mostly located within [Packages directory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/packages).
+* AppDaemon Dashboard Configuration files can be found within the [AppDaemon directory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/appdaemon/dashboards).
+* HA Floorplan Configuration files including my SVG file can be found within the [www/customui/floorplan direcory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/www/custom_ui/floorplan)
 
 # Devices
 * [Raspberry Pi 3](http://amzn.to/2nMYhkX) - Hass.io Installed
