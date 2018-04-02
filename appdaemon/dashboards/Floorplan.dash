@@ -18,4 +18,4 @@ hafloorplan_frame:
     widget_type: iframe
 #    refresh: 60
     url_list:
-      - https://ha.stanvx.myds.me/floorplan
+      - !secret ha_floorplan_url

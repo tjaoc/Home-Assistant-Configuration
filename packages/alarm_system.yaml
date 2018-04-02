@@ -77,7 +77,7 @@ automation:
           actions:
           - action: open
             title: Open Home Assistant
-            url: https://ha.stanvx.myds.me
+            url: !secret base_url
   
 # Stop Police Siren via Xiaomi Gateway
   

@@ -81,7 +81,7 @@
         actions:
         - action: open
           title: Open Home Assistant
-          url: https://ha.stanvx.myds.me
+          url: !secret base_url
         - action: startac
           title: Start AC
 
