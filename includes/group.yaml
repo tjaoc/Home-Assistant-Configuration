@@ -27,6 +27,7 @@ home_view:
   entities:
     - group.airconditioner
     - group.ac_scheduler
+    - group.bedroomfan
     - group.robot_vacuum
 security_view:
   view: yes
@@ -73,6 +74,8 @@ scripts:
     - script.good_night
     - script.start_air_conditioner
     - script.stop_air_conditioner
+    - script.start_fan
+    - script.stop_fan
 cameras:
   name: Cameras
   control: hidden
@@ -131,6 +134,7 @@ speech_functions:
   entities:
     - input_boolean.lastmsg
     - switch.air_conditioner
+    - switch.fan
 mediaplayer_dimmer_livingroom:
   name: Media Player Dimmer - Living Room
   entities:

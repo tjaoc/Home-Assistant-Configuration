@@ -21,7 +21,7 @@ layout:
 clock:
     widget_type: clock
     widget_style: "font-size: 120%"
-    time_style: "color: orange; font-size: 280%"
+    time_style: "color: orange; font-size: 380%"
     date_style: "font-size: 120%"
 
 weather:

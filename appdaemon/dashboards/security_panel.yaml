@@ -45,7 +45,7 @@ alarm:
     entity: alarm_control_panel.ha_alarm
     title: Alarm
     widget_style: "font-size: 120%"
-    title_style: "font-size: 120%"
+    title_style: "font-size: 130%"
     state_style: "font-size: 120%"
     panel_state_style: "font-size: 120%"
     panel_code_style: "font-size: 120%"

@@ -58,3 +58,19 @@ stop_air_conditioner:
       data:
         entity_id: input_select.ac_operation_mode
         option: Power Off
+start_fan:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.fan_operation_mode
+        option: Forward
+    - service: input_number.set_value
+      data:
+        entity_id: input_number.fan_speed
+        value: 3
+stop_fan:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.fan_operation_mode
+        option: Power Off
