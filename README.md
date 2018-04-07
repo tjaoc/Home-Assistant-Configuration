@@ -74,6 +74,7 @@
 ![Home](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardHome.jpeg)
 ![Security](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardSecurity.jpeg)
 ![Weather](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardWeather.jpeg)
+![LENOVOTAB4](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/LENOVOTAB4.png)
 
 Configuration files are being edited with Cloud9 IDE [Hass.io Add-on](https://github.com/hassio-addons/addon-ide).
 
