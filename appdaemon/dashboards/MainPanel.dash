@@ -13,16 +13,16 @@ global_parameters:
 # Layout
 layout:
     - clock(2x1),                                       current_temperature,       current_humidity,    livingroom_temperature, livingroom_lux, bedroom_temperature, bedroom_humidity
-    - entry_light,          entryway_light,             living_room_light_switch,  kitchen_light_switch, good_night_script(2x1), front_door_lock, air_conditioner_switch
-    - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch
-    - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   hallway_motion(2x1)
+    - entry_light,          entryway_light,             living_room_light_switch,  kitchen_light_switch, good_night_script(2x1), front_door_lock, vacuum_switch
+    - study_desk_lamp_light,      trent_bedside_light,        rachel_bedside_light, livingroomlamp_switch, mediaplayer_dimmer,  outsideheater_switch, air_conditioner_switch,    fan_switch
+    - trent_presence(2x1),          rachel_presence(2x1),      livingroom_motion(2x1),   door_count,  window_count
     - include: bottom_panel_main
 
 clock:
     widget_type: clock
     widget_style: "font-size: 120%"
     time_style: "color: orange; font-size: 380%"
-    date_style: "font-size: 120%"
+    date_style: "font-size: 150%"
 
 weather:
     widget_type: weather
@@ -35,7 +35,8 @@ current_temperature:
     precision: 0
     entity: sensor.weather_temperature
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
  
 current_humidity:
     widget_type: sensor
@@ -44,7 +45,8 @@ current_humidity:
     precision: 0
     entity: sensor.weather_humidity
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
 
 trent_presence:
     widget_type: device_tracker
@@ -75,7 +77,8 @@ livingroom_temperature:
     precision: 0
     entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
     
 livingroom_lux:
     widget_type: sensor
@@ -85,7 +88,8 @@ livingroom_lux:
     shorten: 1
     entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
 
 bedroom_temperature:
     widget_type: sensor
@@ -94,7 +98,8 @@ bedroom_temperature:
     precision: 0
     entity: sensor.temperature_158d0001a2e878
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
 
 bedroom_humidity:
     widget_type: sensor
@@ -103,7 +108,8 @@ bedroom_humidity:
     precision: 0
     entity: sensor.humidity_158d0001a2e878
     title_style: "font-size: 120%"
-    widget_style: "font-size: 120%"
+    widget_style: "color: $blue; font-size: 120%"
+    unit_style: "color: $blue"
 
 livingroom_motion:
     widget_type: binary_sensor
@@ -265,7 +271,6 @@ mediaplayer_dimmer:
     icon_style_active: "font-size: 350%"
     icon_style_inactive: "font-size: 350%"
 
-
 good_night_script:
     widget_type: switch
     title: Good Night
@@ -289,6 +294,30 @@ air_conditioner_switch:
     title2_style: "font-size: 120%"
     icon_style_active: "font-size: 350%"
     icon_style_inactive: "font-size: 350%"
+    
+fan_switch:
+    widget_type: switch
+    title: Bedroom Fan
+    entity: switch.fan
+    icon_on: mdi-fan
+    icon_off: mdi-fan-off
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
+
+vacuum_switch:
+    widget_type: switch
+    title: Xiaomi Vacuum
+    entity: vacuum.xiaomi_vacuum_cleaner
+    icon_on: mdi-roomba
+    icon_off: mdi-roomba
+    widget_style: "font-size: 120%"
+    title_style: "font-size: 120%"
+    title2_style: "font-size: 120%"
+    icon_style_active: "font-size: 350%"
+    icon_style_inactive: "font-size: 350%"
 
 front_door_lock:
     widget_type: lock
@@ -298,3 +327,19 @@ front_door_lock:
     widget_style: "font-size: 120%"
     icon_style_active: "font-size: 350%"
     icon_style_inactive: "font-size: 350%"
+    
+door_count:
+    widget_type: sensor
+    title: Door Count
+    precision: 0
+    entity: sensor.door_count
+    title_style: "font-size: 100%"
+    widget_style: "color: $red; font-size: 150%"
+    
+window_count:
+    widget_type: sensor
+    title: Window Count
+    precision: 0
+    entity: sensor.window_count
+    title_style: "font-size: 100%"
+    widget_style: "color: $red; font-size: 150%"

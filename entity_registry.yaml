@@ -234,3 +234,7 @@ sensor.locstar_unknown_type8015_id0003_power_management:
   name:
   platform: zwave
   unique_id: 4-72057594111082673
+media_player.xboxone_3:
+  name:
+  platform: plex
+  unique_id: h6ofdkxbhn3dme7jsk5vtvf2
