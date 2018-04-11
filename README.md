@@ -3,7 +3,7 @@
 #### Navigation:
 * Home Assistant Configuration files are now mostly located within [Packages directory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/packages).
 * AppDaemon Dashboard Configuration files can be found within the [AppDaemon directory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/appdaemon/dashboards).
-* HA Floorplan Configuration files including my SVG file can be found within the [www/customui/floorplan direcory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/www/custom_ui/floorplan)
+* HA Floorplan Configuration files including my SVG file can be found within the [www/customui/floorplan directory](https://github.com/stanvx/Home-Assistant-Configuration/tree/master/www/custom_ui/floorplan)
 
 # Devices
 * [Raspberry Pi 3](http://amzn.to/2nMYhkX) - Hass.io Installed
@@ -47,6 +47,7 @@
 * Burgular notifications from [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor)
 * Temperature notification from [Fibaro Multisensor](https://www.fibaro.com/en/products/motion-sensor) if no one is home and the home temperature is above 23°C at 5PM. - Option to start the Air Conditioner.
 * AC Split System control via [Harmony Hub](http://amzn.to/2n0jhG3).
+* Ceiling Fan control via [Broadlink RM Pro](https://amzn.to/2uOoBR0).
 * Living Room TV Activity control via [Harmony Hub](http://amzn.to/2n0jhG3).
 * Daily Automatic Cleaning when nobody is home via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white)
 * Automatically lock front door after specific time period.
@@ -71,9 +72,13 @@
 #### HA Floorplan
 ![HA Floorplan](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HAFLOORPLAN.PNG)
 #### HA Dashboard
-![Home](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardHome.jpeg)
-![Security](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardSecurity.jpeg)
-![Weather](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardWeather.jpeg)
+![Home](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardHome.png)
+![Security](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardSecurity.png)
+![Weather](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardWeather.png)
+![Floorplan](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/HADashboardFloorplan.png)
+
+# Photos
+![LENOVOTAB4](https://raw.githubusercontent.com/stanvx/Home-Assistant-Configuration/master/screenshots/LENOVOTAB4.png)
 
 Configuration files are being edited with Cloud9 IDE [Hass.io Add-on](https://github.com/hassio-addons/addon-ide).
 
