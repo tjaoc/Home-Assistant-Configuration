@@ -29,6 +29,7 @@ deps
 tts
 secrets.yaml
 known_devices.yaml
+.google_maps_location_sharing.cookies
 *.conf
 plex.conf
 phue.conf

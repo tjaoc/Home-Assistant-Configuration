@@ -65,7 +65,7 @@ family:
   name: Family
   control: hidden
   entities:
-    - device_tracker.trents_galaxy
+    - device_tracker.google_maps_109209758211303121867
     - device_tracker.rachels_iphone
 scripts:
   name: Scripts

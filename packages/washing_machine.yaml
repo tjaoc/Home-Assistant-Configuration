@@ -171,7 +171,7 @@ automation:
         for:
           minutes: 1
       - platform: state
-        entity_id: device_tracker.trents_galaxy
+        entity_id: device_tracker.google_maps_109209758211303121867
         to: 'home'
         for:
           minutes: 2
@@ -209,13 +209,13 @@ automation:
       - service: script.speech_processing
         data_template:
           speech_message: >
-           {% if (is_state('device_tracker.trents_galaxy', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
+           {% if (is_state('device_tracker.google_maps_109209758211303121867', 'home')) or (is_state('device_tracker.rachels_iphone', 'home'))  %}
              Attention!: the washing machine has finished and is ready to be emptied.
            {% endif %}
       - service_template: >
-          {% if (is_state('device_tracker.trents_galaxy', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
+          {% if (is_state('device_tracker.google_maps_109209758211303121867', 'home')) and (is_state('device_tracker.rachels_iphone', 'home'))  %}
             notify.trent_and_rachel
-          {% elif is_state('device_tracker.trents_galaxy', 'home') %}
+          {% elif is_state('device_tracker.google_maps_109209758211303121867', 'home') %}
             notify.trent
           {% elif is_state('device_tracker.rachels_iphone', 'home') %}
             notify.rachel
