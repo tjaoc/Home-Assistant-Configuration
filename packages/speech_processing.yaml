@@ -19,6 +19,18 @@ input_boolean:
   lastmsg:
     name: Last Message
     initial: off
+  guest_mode:
+    name: Guest Mode
+    initial: off
+    icon: mdi:account-alert
+  alert_mode:
+    name: Alert Mode
+    initial: off
+    icon: mdi:alert-octagram
+  speech_notifications:
+    name: Speech Notifications
+    initial: on
+    icon: mdi:text-to-speech
 
 script:
   speech_processing:

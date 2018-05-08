@@ -5,9 +5,9 @@
 ############################################################
 
 sensor.weather_minimum:
- icon: 'mdi:thermometer'
+ icon: mdi:thermometer
 sensor.weather_maximum:
- icon: 'mdi:thermometer'
+ icon: mdi:thermometer
 sensor.temperature_158d0001a2e878:
   friendly_name: Bedroom Temperature
   icon: mdi:thermometer
@@ -37,24 +37,6 @@ binary_sensor.tampering:
 script.good_night:
   friendly_name: Good Night
   icon: mdi:sleep
-script.start_air_conditioner:
-  friendly_name: Start Air Conditioner
-  icon: mdi:air-conditioner
-script.stop_air_conditioner:
-  friendly_name: Stop Air Conditioner
-  icon: mdi:air-conditioner
-script.start_fan:
-  friendly_name: Start Fan
-  icon: mdi:fan
-script.stop_fan:
-  friendly_name: Stop Fan
-  icon: mdi:fan
-switch.air_conditioner:
-  friendly_name: Air Conditioner
-  icon: mdi:air-conditioner
-switch.fan:
-  friendly_name: Fan
-  icon: mdi:fan
 switch.living_room_lamp:
   icon: mdi:lamp
 light.trent_bedside:

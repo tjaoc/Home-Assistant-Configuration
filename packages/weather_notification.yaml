@@ -36,12 +36,20 @@ sensor:
       - weather
       - clouds
       - rain
+input_boolean:
+  disable_morning_notification:
+    name: Disable Morning Notification
+    initial: off
+    icon: mdi:weather-sunset-up
+  disable_afternoon_notification:
+    name: Disable Afternoon Notification
+    initial: off
+    icon: mdi:weather-sunset-down
 
 ###############################################################################
 #                               Automations
 ###############################################################################
 automation:
-
   - alias: 'Send notification when sun rises'
     trigger:
     - platform: sun
@@ -55,7 +63,6 @@ automation:
     - service: notify.trent
       data:
         message: "Good morning! Forecast: {{ states('sensor.weather_summary') }}, temp {{ states('sensor.weather_daily_low_temperature') }} - {{ states('sensor.weather_daily_high_temperature') }}°C.  {{ states('sensor.melbourne_uv_forecast') }}. {{ states('sensor.melbourne_forecast_line3') }}. Now: {{ states('sensor.weather_temperature') }}°c {{ states('sensor.owm_condition') }}, {{ states('sensor.owm_rain') }}"  
-  
   
   - alias: 'Send notification when sun sets'
     trigger:

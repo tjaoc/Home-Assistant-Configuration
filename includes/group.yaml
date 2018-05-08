@@ -52,7 +52,7 @@ info_view:
     - group.washing_machine
     - group.ups
     - group.automation_override
-    - group.mediaplayer_dimmer_livingroom
+#    - group.mediaplayer_dimmer_livingroom
     - group.fkiosk
     - group.multisensor
     - group.battery_levels
@@ -116,9 +116,7 @@ automation_override:
     - input_boolean.alert_mode
     - input_boolean.speech_notifications
     - input_boolean.trash_reminders
-    - input_boolean.disable_auto_living_room_lamp
     - input_boolean.disable_autolock_front_door
-    - input_boolean.disable_media_player_light_control
     - input_boolean.disable_current_temperature_notification
     - input_boolean.disable_morning_notification
     - input_boolean.disable_afternoon_notification
@@ -128,18 +126,6 @@ automation_override:
     - input_boolean.disable_dustbin_notification
     - input_boolean.disable_entry_light_trent_home
     - input_boolean.disable_entryway_light_frontdoor
-speech_functions:
-  name: Speech Functions
-  control: hidden
-  entities:
-    - input_boolean.lastmsg
-    - switch.air_conditioner
-    - switch.fan
-mediaplayer_dimmer_livingroom:
-  name: Media Player Dimmer - Living Room
-  entities:
-    - input_boolean.mediaplayer_dimmer_livingroom
-    - input_number.mediaplayer_dimmer_livingroom
 multisensor:
   name: Multisensors
   entities:

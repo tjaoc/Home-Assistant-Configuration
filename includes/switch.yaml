@@ -61,26 +61,6 @@
       friendly_name: "Reciever HDMI 4"
       command_on: 'JgBQAAABJZURFBE4ERQRORI3ETgTNhMSEzcTEhM2ExITEhMSExITNxITExITEhMSEzYTEhM3EhMTNhM2EzYUNhMSEzYTEhMSEwAFPQABJ0kTAA0FAAAAAAAAAAA='
 
-# Switch Templates for Google Assistant Voice Control
-- platform: template
-  switches:
-    air_conditioner:
-      value_template: "{{ is_state('input_select.ac_operation_mode', 'COOL') }}"
-      turn_on:
-        service: script.turn_on
-        entity_id: script.start_air_conditioner
-      turn_off:
-        service: script.turn_on
-        entity_id: script.stop_air_conditioner
-    fan:
-      value_template: "{{ is_state('input_select.fan_operation_mode', 'Forward') }}"
-      turn_on:
-        service: script.turn_on
-        entity_id: script.start_fan
-      turn_off:
-        service: script.turn_on
-        entity_id: script.stop_fan
-
 # Test NZBGet Switch
 - platform: nzbget
   host: !secret nzbget_ipaddress

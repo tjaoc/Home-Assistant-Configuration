@@ -238,3 +238,15 @@ media_player.xboxone_3:
   name:
   platform: plex
   unique_id: h6ofdkxbhn3dme7jsk5vtvf2
+media_player.xboxone_4:
+  name:
+  platform: plex
+  unique_id: mqonqlnpogb033g66bp1ehhb
+media_player.galaxy_s8_2:
+  name:
+  platform: plex
+  unique_id: d4c05f9bd8b698a8-com-plexapp-android
+media_player.chrome_2:
+  name:
+  platform: plex
+  unique_id: 0mbz0uf5uz9kossl6sio655b
