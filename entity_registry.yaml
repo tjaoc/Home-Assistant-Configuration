@@ -250,3 +250,23 @@ media_player.chrome_2:
   name:
   platform: plex
   unique_id: 0mbz0uf5uz9kossl6sio655b
+zwave.aeotec_zw090_zstick_gen5:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.fibaro_system_fgms001zw5_motion_sensor:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.fibaro_system_fgs222_double_relay_switch_2x15kw:
+  name:
+  platform: zwave
+  unique_id: node-3
+zwave.kas600_zwave_lock:
+  name:
+  platform: zwave
+  unique_id: node-4
+media_player.chrome_3:
+  name:
+  platform: plex
+  unique_id: 5v1p725w8lcwhrl2eggwwas7

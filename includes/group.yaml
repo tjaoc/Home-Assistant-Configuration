@@ -126,6 +126,7 @@ automation_override:
     - input_boolean.disable_dustbin_notification
     - input_boolean.disable_entry_light_trent_home
     - input_boolean.disable_entryway_light_frontdoor
+    - input_boolean.disable_auto_off_outside_heater
 multisensor:
   name: Multisensors
   entities:

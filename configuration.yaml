@@ -204,7 +204,6 @@ group: !include includes/group.yaml
 google_assistant: !include includes/google_assistant.yaml
 sensor: !include includes/sensor.yaml
 scene: !include includes/scene.yaml
-script: !include includes/script.yaml
 switch: !include includes/switch.yaml
 #image_processing: !include includes/image_processing.yaml
 

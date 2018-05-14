@@ -76,7 +76,63 @@ script:
         data:
           entity_id: input_select.fan_operation_mode
           option: Power Off
-
+  good_night:
+    sequence:
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.lights
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.switches
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.living_room_home
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.living_room
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.bed_room
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.outside
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.tv_ua55ju6400
+      - service: remote.turn_off
+        data:
+          entity_id: remote.living_room
+      - service: lock.lock
+        data:
+          entity_id: lock.front_door
+      - condition: or
+        conditions:
+          - condition: numeric_state
+            entity_id: sensor.door_count
+            above: 0
+          - condition: numeric_state
+            entity_id: sensor.window_count
+            above: 0
+      - service: script.speech_processing_force
+        data_template:
+          speech_message: >
+           {% if is_state('sensor.door_count', '1') and is_state('sensor.window_count', '0') %}
+             Please note: currently there is {{ states.sensor.door_count.state }} door open.
+           {% elif is_state('sensor.door_count', '0') and is_state('sensor.window_count', '1') %}
+             Please note: currently there is {{ states.sensor.window_count.state }} window open.
+           {% elif is_state('sensor.door_count', '1') and is_state('sensor.window_count', '1') %}
+             Please note: currently there is {{ states.sensor.door_count.state }} door and {{ states.sensor.window_count.state }} window open.
+           {% elif states.sensor.door_count.state | int > 1 and is_state('sensor.window_count', '0') %}
+             Please note: currently there are {{ states.sensor.door_count.state }} doors open.
+           {% elif is_state('sensor.door_count', '0') and states.sensor.window_count.state | int > 1 %}
+             Please note: currently there are {{ states.sensor.window_count.state }} windows open.
+           {% elif states.sensor.door_count.state | int > 1 and states.sensor.window_count.state | int > 1 %}
+             Please note: currently there are {{ states.sensor.door_count.state }} doors and {{ states.sensor.window_count.state }} windows open.
+           {% elif is_state('sensor.door_count', '1') and states.sensor.window_count.state | int > 1 %}
+             Please note: currently there is {{ states.sensor.door_count.state }} door and {{ states.sensor.window_count.state }} windows open.
+           {% elif states.sensor.door_count.state | int > 1 and is_state('sensor.window_count', '1') %}
+             Please note: currently there are {{ states.sensor.door_count.state }} doors and {{ states.sensor.window_count.state }} window open.
+           {% endif %}
 switch:
   - platform: template
     switches:
