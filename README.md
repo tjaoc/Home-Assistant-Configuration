@@ -27,7 +27,7 @@
 * [Xiaomi Mijia Smart LED Desk Lamp](http://www.gearbest.com/table-lamps/pp_363779.html) - Desk Lamp
 * BroadLink SP Mini 3 x4 - Power Socket Control
 * [BroadLink RM Mini 3](https://www.gearbest.com/living-appliances/pp_357329.html) - Projector Room Control
-* [Milight WiFi Gateway Emulator](https://github.com/sidoh/esp8266_milight_hub) (NodeMCU ESP8266 / NRF24L01+ module) - Allows for controlling an unlimited amount of LimitlessLED Light groups via MQTT Protocol
+* [MiLight WiFi Gateway Emulator](https://github.com/sidoh/esp8266_milight_hub) (NodeMCU ESP8266 / NRF24L01+ module) - Allows for controlling an unlimited amount of LimitlessLED Light groups via MQTT Protocol
 * [LimitlessLED Full Color and Dual White Downlight](http://www.limitlessled.com/shop/mr16-rgbw-ww-cw-color-and-white-led) - Smart Dimmable Full Color Downlights
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) - Smart Light Remote Control [HASS Integrated](https://github.com/sidoh/esp8266_milight_hub/wiki/Using-Milight-Remote-with-HomeAssistant)
 * [Google Home](https://store.google.com/product/google_home) - Voice Assistant/Control
@@ -50,7 +50,10 @@
 * Ceiling Fan control via [Broadlink RM Pro](https://amzn.to/2uOoBR0).
 * Living Room TV Activity control via [Harmony Hub](http://amzn.to/2n0jhG3).
 * Daily Automatic Cleaning when nobody is home via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white)
+* [Selective room cleaning](https://community.home-assistant.io/t/howto-xiaomi-vacuum-zoned-cleaning) via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white) including custom Floor Plan state card to allow me to click / touch a room to begin a cleaning cycle.
 * Automatically lock front door after specific time period.
+* Automatically turn on Entryway light when front door opens and turn off after time period.
+* Automatically turn on Living room light when front door opens and no motion detected inside for 10 minutes.
 * Automatically turn off Outdoor heater after specific time period
 * Change Home Assistant to a dark theme at sunset and back to the light theme at sunrise.
 * Hide Media Players from the Home Assistant Default View when not being used.
