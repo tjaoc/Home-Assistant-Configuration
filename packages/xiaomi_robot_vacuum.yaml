@@ -12,7 +12,7 @@ homeassistant:
       icon: mdi:delete-empty
     binary_sensor.vacuum_room:
       custom_ui_state_card: state-card-floorplan
-      config: !include /config/floorplan_vacuum.yaml
+      config: !include ../floorplan_vacuum.yaml
 
 binary_sensor:
   - platform: mqtt

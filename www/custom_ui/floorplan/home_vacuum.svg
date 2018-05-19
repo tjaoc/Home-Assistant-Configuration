@@ -57,7 +57,7 @@
      showgrid="false"
      inkscape:zoom="0.32000001"
      inkscape:cx="2087.0729"
-     inkscape:cy="1045.5914"
+     inkscape:cy="1170.5914"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -560,14 +560,16 @@
 
 
 
+
 </g><g
-     transform="matrix(3.599586,0,0,3.599586,2173.7536,3008.0501)"
+     transform="matrix(3.599586,0,0,3.599586,2123.7536,3120.5501)"
      id="g1034"
      style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"><text
    y="-5"
    font-size="25"
    id="text1032"
    style="font-size:25px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25003001">Kitchen</text>
+
 
 
 
@@ -1401,6 +1403,7 @@
 
 
 
+
 </g><g
    style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"
    id="g1022"
@@ -1417,10 +1420,11 @@
 
 
 
+
 </g><g
    style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"
    id="g1014"
-   transform="matrix(3.599586,0,0,3.599586,2867.5395,2070.5051)"><text
+   transform="matrix(3.599586,0,0,3.599586,2873.7895,2158.0051)"><text
    style="font-size:25px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25003001"
    id="text1012"
    font-size="25"
@@ -1433,14 +1437,16 @@
 
 
 
+
 </g><g
    style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"
    id="g1018"
-   transform="matrix(3.599586,0,0,3.599586,2926.2993,2899.6248)"><text
+   transform="matrix(3.599586,0,0,3.599586,2924.2993,2905.6248)"><text
    style="font-size:25px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25003001"
    id="text1016"
    font-size="25"
    y="-5">Study</text>
+
 
 
 
@@ -1465,6 +1471,7 @@
 
 
 
+
 </g><g
    style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"
    id="g1046"
@@ -1481,6 +1488,7 @@
 
 
 
+
 </g><g
    style="font-weight:bold;font-family:sans-serif;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50006002"
    id="g1030"
@@ -1489,6 +1497,7 @@
    id="text1028"
    font-size="25"
    y="-5">Meals</text>
+
 
 
 
