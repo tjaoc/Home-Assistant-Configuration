@@ -1,0 +1,26 @@
+      name: Vacuum Floorplan
+      image: /local/custom_ui/floorplan/home_vacuum.svg
+      stylesheet: /local/custom_ui/floorplan/home_vacuum.css
+      
+      # These options are optional
+      # warnings:            # enable warnings (to find out why things might not be working correctly)
+      # pan_zoom:            # enable experimental panning / zooming
+
+      last_motion_entity: sensor.template_last_motion
+      last_motion_class: last-motion
+
+      groups:
+        - name: Vacuum Scripts
+          entities:
+             - script.vacuum_bedroom
+             - script.vacuum_ensuite_bathroom
+             - script.vacuum_main_bathroom
+             - script.vacuum_projector_room
+             - script.vacuum_study
+             - script.vacuum_entryway
+             - script.vacuum_living_room
+             - script.vacuum_dining_room
+             - script.vacuum_kitchen
+          action:
+            domain: script
+            service: turn_on

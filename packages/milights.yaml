@@ -14,6 +14,10 @@ input_boolean:
     name: Disable Entryway Light When Frontdoor Open
     initial: off
     icon: mdi:home
+  disable_livingroom_light_frontdoor:
+    name: Disable Living Room Light When Frontdoor Open
+    initial: off
+    icon: mdi:home
 
 light:
 # MILIGHT LED MQTT
@@ -53,7 +57,7 @@ automation:
         payload_template: >
           {{ trigger.payload }}
 
-  - alias: Entry Light Trent Arrives Home
+  - alias: Entry Light Trent or Rachel Arrive Home
     trigger:
     - platform: state
       entity_id: device_tracker.google_maps_109209758211303121867
@@ -80,7 +84,7 @@ automation:
     - service: light.turn_off
       entity_id: light.entry
 
-  - alias: Entryway Light Front Door
+  - alias: Entryway & Living Room Light Front Door
     trigger:
     - platform: state 
       entity_id: binary_sensor.door_window_sensor_158d00019f3211
@@ -102,4 +106,35 @@ automation:
       entity_id: light.entryway
     - delay: '00:10:00'
     - service: light.turn_off
-      entity_id: light.entryway  
+      entity_id: light.entryway
+      
+  - alias: Living Room Light Arriving Front Door
+    trigger:
+    - platform: state 
+      entity_id: binary_sensor.door_window_sensor_158d00019f3211
+      to: 'on'
+    condition:
+      condition: and
+      conditions:
+      - condition: sun
+        after: sunset
+        after_offset: -0:30:00
+      - condition: state
+        entity_id: switch.livingroom_light
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.disable_livingroom_light_frontdoor
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+        state: 'off'
+        for:
+          minutes: 10
+      - condition: state
+        entity_id: binary_sensor.motion_sensor_158d000165627b
+        state: 'off'
+        for:
+          minutes: 10
+    action:
+    - service: switch.turn_on
+      entity_id: switch.livingroom_light
