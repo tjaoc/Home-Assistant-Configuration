@@ -51,12 +51,14 @@
 * Living Room TV Activity control via [Harmony Hub](http://amzn.to/2n0jhG3).
 * Daily Automatic Cleaning when nobody is home via [Xiaomi Roborock Robot Vacuum Cleaner 2](https://xiaomi-mi.com/appliances/xiaomi-mijia-roborock-robot-vacuum-cleaner-2-white)
 * Automatically lock front door after specific time period.
+* Automatically turn off Outdoor heater after specific time period
 * Change Home Assistant to a dark theme at sunset and back to the light theme at sunrise.
 * Hide Media Players from the Home Assistant Default View when not being used.
 * Media Player light control in Living Room, Dim lights when playing and brighten when paused/stopped.
 * [LimitlessLED Remote Control](http://www.limitlessled.com/shop/remote-control-for-rgb-ww-cw-color-led-lightbulbs) forwarding to ensure Home Assistant doesn't lose sync whilst using it.
 * Turn on Entryway light for 10 minutes once I get home.
 * Weather notification at sunrise and sunset.
+* Goodnight script / Voice activation which will turn off all devices, lock the front door and advise via a voice notification if and how many windows or doors are open.
 * Trash and Recycle Bin night reminders - Thanks [CCOSTAN](https://github.com/CCOSTAN/Home-AssistantConfig)!
 * Washing Machine monitoring and reminders - Thanks [philhawthorne](https://philhawthorne.com/making-dumb-dishwashers-and-washing-machines-smart-alerts-when-the-dishes-and-clothes-are-cleaned/)!
 * UPS status notification (On Battery / Low Battery / On Line)
