@@ -158,7 +158,12 @@ script:
               entity_id: vacuum.xiaomi_vacuum_cleaner
               command: app_zoned_clean
               params: [[23004,25042,26404,28442,1]]
-
+sensor:
+  - platform: template
+    sensors:
+      xiaomi_vacuum_cleaner_status:
+        friendly_name: "Xiaomi Vacuum Cleaner Status"
+        value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}"
 
 ###############################################################################
 #                               Automations
